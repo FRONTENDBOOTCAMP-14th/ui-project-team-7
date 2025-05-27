@@ -9,11 +9,33 @@
 ├── src
 │   ├── reset.css
 │   ├── global.css
+│   └── components
+│   	└── component-name
+│   		└── index.html
+│   		└── style.css
 │   └── page-name
 │   	├── style.css
 │   	└── index.html
 └── index.html
 ```
+
+-   public: build될 필요 없는 정적 파일
+-   reset.css: style 초기화
+-   global.css: 커스텀 속성 선언. reset.css를 가져옴
+-   components: 재사용 가능한 컴포넌트들
+
+    -   특정 페이지에서 컴포넌트 A 사용 시
+
+        -   `/src/page-name/style.css`: `/src/components/component-a/style.css` 파일을 import
+            ```css
+            @import '/src/components/component-a/style.css';
+            ```
+        -   `/src/page-name/index.html`: `/src/components/component-a/index.html` 내에 html 요소만을 copy/paste하여 사용한다
+
+-   page-name: 페이지별 index.html, style.css를 그룹화한다. **항상 global.css를 import한다.**
+    ```css
+    @import '../global.css';
+    ```
 
 ## coding convention
 
@@ -36,6 +58,27 @@
 | Package:  | 새로운 라이브러리 혹은 패키지 설치               |
 
 ![이미지](https://wholesale-snipe-50a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F2c9b0f24-8e73-4514-b0c2-312f3d7d31f4%2F2d520183-dab0-4411-8c9c-eba2ca836baf%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-12-12_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.59.53.png?table=block&id=30b748ff-9107-4b73-9c15-afc801aa44d9&spaceId=2c9b0f24-8e73-4514-b0c2-312f3d7d31f4&width=1420&userId=&cache=v)
+
+### GIT 브랜치 전력
+
+PR은 나머지 팀원 3명의 approval이 있어야 머지 가능하며, resolve되지 않는 conversation이 있다면 머지가 불가능하다.
+
+```bash
+main
+└── release
+└── develop
+	└── feature branch(feat, refactor, fix, etc..)
+```
+
+-   main: Netlify로 배포하는 브랜치로, push 불가하며 실제 서비스에 해당
+-   release: 배포 전 잘 작동하는지 확인하는 브랜치
+-   develop: default/root 브랜치로, 모든 기능 구현의 시작점이다. push 불가
+-   feature branch: 기능 구현을 위한 브랜치
+    -   feat/페이지이름 혹은 기능
+    -   refactor/개선사항
+    -   fix/버그수정사항
+    -   style/스타일변경
+    -   etc...
 
 ### HTML, CSS
 
