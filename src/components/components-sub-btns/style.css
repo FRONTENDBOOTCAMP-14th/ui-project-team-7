@@ -1,21 +1,7 @@
-@import '../global.css';
+@import '/src/global.css';
 
 body {
   margin: 50px;
-}
-
-/* 시각적으로 숨김 - 접근성 고려 */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 /* 버튼 스타일 */
@@ -23,13 +9,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 100px;
+  gap: var(--spacing-2);
+  width: 78px;
   height: 36px;
-  background-color: white;
-  color: #00C6BE;
-  font-weight: bold;
-  font-size: 16px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-weight: var(--weight-medium);
+  font-size: var(--font-size-sm);
   border: 1px solid #00C6BE;
   border-radius: 20px;
   cursor: pointer;
@@ -42,8 +28,8 @@ body {
 
 /* 체크 활성화 시, 버튼 색상 변경 */
 #subscribe:checked + .sub-btn {
-  background-color: #00C6BE;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
 }
 
@@ -71,14 +57,10 @@ body {
 }
 
 /* 버튼 클릭 시, 텍스트 변경 */
-#subscribe:checked+.sub-btn .text::before {
-  content: "구독중";
-}
-
 #subscribe:not(:checked)+.sub-btn .text::before {
   content: "구독";
 }
 
-.sub-btn .text {
-  display: inline-block;
+#subscribe:checked+.sub-btn .text::after {
+  content: "구독중";
 }
