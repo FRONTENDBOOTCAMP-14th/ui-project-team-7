@@ -1,0 +1,55 @@
+@import '../../global.css';
+
+:root {
+	--color-icon-gray: #444444;
+	--color-icon-black: #231f20;
+	--size: 30px;
+}
+
+.logo-default {
+	display: inline-flex;
+	margin: 0;
+	color: var(--color-font-black);
+}
+
+.search-on,
+.icon-notification {
+	padding: 0;
+	color: var(--color-icon-gray);
+	background: transparent;
+	border: none;
+}
+
+.button-start {
+	padding-block: var(--spacing-1);
+	padding-inline: var(--spacing-5);
+	font-size: 10px;
+	color: var(--color-white);
+	background: var(--color-icon-black);
+	border-radius: var(--font-size-sm);
+}
+
+.link-mypage {
+	img {
+		width: var(--size);
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
+
+.wrapper {
+	display: flex;
+	height: 50px;
+	padding-inline: 20px;
+	padding-block: 14px;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wrapper-icon {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--spacing-7);
+}
