@@ -11,10 +11,7 @@
 	color: var(--color-font-gray);
 	cursor: pointer;
 	font-size: var(--font-size-xs);
-
-	span {
-		user-select: none;
-	}
+	user-select: none;
 }
 
 .erl-btn:active {
