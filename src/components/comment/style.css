@@ -1,3 +1,5 @@
+@import '/src/global.css';
+
 .comment-wrapper {
 	border: 1px solid #ddd;
 }
