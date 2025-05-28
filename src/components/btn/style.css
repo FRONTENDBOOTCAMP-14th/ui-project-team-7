@@ -1,0 +1,28 @@
+@import '/src/global.css';
+
+.erl-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 15px;
+	border: 1px solid var(--color-border-gray);
+	border-radius: 30px;
+	background: var(--color-white);
+	color: var(--color-font-gray);
+	font-size: var(--font-size-xs);
+	user-select: none;
+}
+
+/* 초기 버튼 비활성 스타일 */
+form:has(input:placeholder-shown) button {
+	background-color: var(--color-white);
+	color: var(--color-font-gray);
+	cursor: not-allowed;
+}
+
+/* 입력값이 있을 때 스타일 변경 */
+form:has(input:not(:placeholder-shown)) button {
+	background-color: var(--color-primary);
+	color: var(--color-font-light-gray);
+	cursor: pointer;
+}
