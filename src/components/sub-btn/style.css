@@ -1,65 +1,56 @@
 @import '/src/global.css';
 
-body {
-	margin: 50px;
-}
 /* 버튼 스타일 */
 .sub-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: var(--spacing-2);
-	width: 78px;
+	gap: var(--spacing-1);
 	height: 36px;
+	padding: 0 16px;
 	background-color: var(--color-white);
 	color: var(--color-primary);
-	font-weight: var(--weight-medium);
-	font-size: var(--font-size-sm);
-	border: 1px solid #00c6be;
+	border: 1px solid currentColor;
 	border-radius: 20px;
 	cursor: pointer;
-	user-select: none;
+	font-size: var(--font-size-xs);
+	font-weight: var(--weight-medium);
+
+	.icon {
+		display: flex;
+	}
+
+	.check-icon {
+		display: none;
+	}
+
+	.sub-on {
+		display: none;
+	}
+
+	/* 구독 */
+	.plus-icon,
+	.sub-off {
+		display: flex;
+	}
 }
 
-.icon {
-	display: flex;
-}
-
-/* 체크 활성화 시, 버튼 색상 변경 */
+/* 구독중 */
 #subscribe:checked + .sub-btn {
 	background-color: var(--color-primary);
 	color: var(--color-white);
 	border: none;
-}
 
-.sub-btn .check-icon {
-	display: none;
-}
+	.check-icon {
+		display: flex;
+	}
 
-.sub-btn .plus-icon {
-	display: flex;
-}
+	.sub-on {
+		display: flex;
+	}
 
-.text {
-	font-size: var(--font-size-xs);
-	font-weight: var(--weight-medium);
-}
-
-/* 체크 활성화 시, 체크 아이콘 */
-#subscribe:checked + .sub-btn .check-icon {
-	display: flex;
-}
-
-/* 체크 활성화 시, 플러스 아이콘 숨기기 */
-#subscribe:checked + .sub-btn .plus-icon {
-	display: none;
-}
-
-/* 버튼 클릭 시, 텍스트 변경 */
-#subscribe:not(:checked) + .sub-btn .text::before {
-	content: '구독';
-}
-
-#subscribe:checked + .sub-btn .text::after {
-	content: '구독중';
+	.plus-icon,
+	.sub-off {
+		display: none;
+	}
 }

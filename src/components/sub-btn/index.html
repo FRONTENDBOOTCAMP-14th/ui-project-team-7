@@ -6,13 +6,19 @@
 		<link rel="stylesheet" href="./style.css" />
 		<title>button</title>
 	</head>
-
 	<body>
-		<input type="checkbox" id="subscribe" class="sr-only" />
-		<label for="subscribe" class="sub-btn" role="button" tabindex="0">
-			<span class="icon check-icon" aria-hidden="true">
+		<form action="#" method="POST">
+			<input type="checkbox" id="subscribe" class="sr-only" />
+			<label for="subscribe" class="sub-btn" role="button" tabindex="0">
 				<!-- 체크 아이콘 -->
-				<svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+				<svg
+					class="icon check-icon"
+					width="17"
+					height="17"
+					viewBox="0 0 24 24"
+					fill="none"
+					aria-hidden="true"
+				>
 					<path
 						d="M20 6L9 17L4 12"
 						stroke="white"
@@ -21,10 +27,16 @@
 						stroke-linejoin="round"
 					/>
 				</svg>
-			</span>
-			<span class="icon plus-icon" aria-hidden="true">
+		
 				<!-- 플러스 아이콘 -->
-				<svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+				<svg
+					class="icon plus-icon"
+					width="17"
+					height="17"
+					viewBox="0 0 24 24"
+					fill="none"
+					aria-hidden="true"
+				>
 					<path
 						d="M12 5v14M5 12h14"
 						stroke="#00C6BE"
@@ -32,9 +44,10 @@
 						stroke-linecap="round"
 					/>
 				</svg>
-			</span>
-			<span class="text"></span>
-		</label>
-		<hr />
+		
+				<span class="sub-off">구독</span>
+				<span class="sub-on">구독중</span>
+			</label>
+		</form>
 	</body>
 </html>
