@@ -2,49 +2,53 @@
 
 .comment-wrapper {
 	border: 1px solid #ddd;
-}
 
-.comment-contents {
-	display: flex;
-	flex-direction: column;
-	gap: calc(var(--spacing-3) + 1px);
-	padding: var(--spacing-7);
+	/* 댓글 폼 상단 영역 */
+	& > .comment-contents {
+		display: flex;
+		flex-direction: column;
+		gap: calc(var(--spacing-3) + 1px);
+		padding: var(--spacing-7);
 
-	textarea {
-		border: none;
-		width: 100%;
-		height: 109px;
-		&:focus {
-			outline: 1px solid var(--color-primary);
+		/* 댓글 폼 헤더 */
+		& > .comment-header {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			height: 20px;
+
+			color: #111;
+
+			figcaption {
+				font-size: var(--font-size-xs);
+				font-weight: var(--weight-medium);
+			}
 		}
-		resize: none;
-		font-size: var(--font-size-base);
-		color: var(--color-font-black);
-		&::placeholder {
-			color: var(--color-font-light-gray);
+
+		/* 댓글 폼 textarea */
+		& > textarea {
+			border: none;
+			width: 100%;
+			height: 109px;
+			&:focus {
+				outline: 1px solid var(--color-primary);
+			}
+			resize: none;
+			font-size: var(--font-size-base);
+			color: var(--color-font-black);
+			&::placeholder {
+				color: var(--color-font-light-gray);
+			}
 		}
 	}
-}
 
-.comment-header {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	height: 20px;
-
-	color: #111;
-
-	figcaption {
-		font-size: var(--font-size-xs);
-		font-weight: var(--weight-medium);
+	/* 댓글 폼 하단 영역 */
+	& > .comment-footer {
+		height: 49px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		border-top: 1px solid #ddd;
+		padding: var(--spacing-7);
 	}
-}
-
-.comment-footer {
-	height: 49px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	border-top: 1px solid #ddd;
-	padding: var(--spacing-7);
 }
