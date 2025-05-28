@@ -1,0 +1,33 @@
+@import '/src/global.css';
+
+body {
+	margin: 50px;
+}
+/* 버튼 스타일 */
+.sub-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing-2);
+	width: 50px;
+	height: 30px;
+	background-color: var(--color-white);
+	color: var(--color-font-gray);
+	border: 1px solid var(--color-border-gray);
+	border-radius: 20px;
+	cursor: pointer;
+	user-select: none;
+}
+
+/* 체크 활성화 시, 버튼 색상 변경 */
+#subscribe:checked + .sub-btn {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	border: none;
+}
+
+.text {
+	font-size: var(--font-size-sm);
+	font-weight: var(--weight-medium);
+}
+
