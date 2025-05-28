@@ -1,0 +1,29 @@
+@import '../global.css';
+
+.nav-bar {
+	width: 360px;
+	height: 100px;
+	margin: 18px auto 34px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 34px;
+	box-sizing: border-box;
+}
+
+.nav-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: #111111;
+	font-size: 12px;
+}
+
+.nav-item svg {
+	display: block;
+}
+
+.nav-item span {
+	margin-bottom: 8px;
+}
