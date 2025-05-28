@@ -59,7 +59,7 @@
 
 ![이미지](https://wholesale-snipe-50a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F2c9b0f24-8e73-4514-b0c2-312f3d7d31f4%2F2d520183-dab0-4411-8c9c-eba2ca836baf%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-12-12_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.59.53.png?table=block&id=30b748ff-9107-4b73-9c15-afc801aa44d9&spaceId=2c9b0f24-8e73-4514-b0c2-312f3d7d31f4&width=1420&userId=&cache=v)
 
-### GIT 브랜치 전력
+### GIT 브랜치 전략
 
 PR은 나머지 팀원 3명의 approval이 있어야 머지 가능하며, resolve되지 않는 conversation이 있다면 머지가 불가능하다.
 
@@ -100,6 +100,9 @@ main
     -   height, min-height, max-height
     -   margin, margin-\*
     -   padding, padding-\*
+    -   border, border-width, border-style, border-color
+    -   border-radius
+    -   outline, outline-offset
     -   overflow, overflow-x, overflow-y
 
     2.  🎨 Layout & Flex/Grid
@@ -126,19 +129,13 @@ main
     -   box-shadow
     -   opacity
 
-    5.  🎨 Border & Outline
-
-    -   border, border-width, border-style, border-color
-    -   border-radius
-    -   outline, outline-offset
-
-    6.  ✨ Effects & Animation
+    5.  ✨ Effects & Animation
 
     -   transition, transition-property, transition-duration, transition-timing-function, transition-delay
     -   transform
     -   animation, animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, - animation-fill-mode
 
-    7.  🧩 Miscellaneous (기타)
+    6.  🧩 Miscellaneous (기타)
 
     -   cursor
     -   pointer-events
