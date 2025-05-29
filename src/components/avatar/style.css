@@ -1,0 +1,12 @@
+@import '/src/global.css';
+
+.avatar {
+	--size: 30px;
+
+	img {
+		width: var(--size);
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
