@@ -1,22 +1,22 @@
-.avatar {
-	--size: 80px;
-}
-
 .profile-card {
+	--width-size: 310px;
+	--height-size: 150px;
+	display: inline-flex;
 	position: relative;
-	max-width: 380px;
 
+	
 	.profile-info {
+		inline-size: var(--width-size);
+		block-size: var(--height-size);
+
 		.name {
 			font-size: var(--font-size-2xl);
 			font-weight: var(--weight-medium);
-			line-height: 110%;
 			padding-top: 23px;
 		}
 
 		.job {
 			font-size: var(--font-size-2xs);
-			line-height: 150%;
 			color: var(--color-font-light-gray);
 			margin: 7px 0 23px 0;
 		}
@@ -24,28 +24,30 @@
 		.desc {
 			display: -webkit-box;
 			-webkit-line-clamp: 2;
-
 			line-clamp: 2;
 			-webkit-box-orient: vertical;
 			text-overflow: ellipsis;
 			overflow: hidden;
+
 			color: var(--color-font-gray);
 			font-weight: var(--weight-light);
 			font-size: var(--font-size-sm);
-			line-height: 146%;
 			padding-right: var(--spacing-4);
 		}
 	}
 
 	.avatar {
+		--size: 30px;
+
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
 		img {
-			position: absolute;
-			top: 0px;
-			right: 0px;
 			width: var(--size);
 			aspect-ratio: 1;
+			object-fit: cover;
 			border-radius: 50%;
-			overflow: hidden;
 		}
 	}
 }

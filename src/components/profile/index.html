@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>컴포넌트 - avatar(container)</title>
+		<title>컴포넌트 - profile</title>
 		<link rel="icon" href="/vite.svg" />
 		<link
 			rel="preload"
@@ -16,20 +16,20 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<div class="profile-card">
-			<div class="profile-info">
+		<article class="profile-card">
+			<header class="profile-info">
 				<h2 class="name">동그라미 원</h2>
 				<p class="job">에세이스트</p>
 				<p class="desc">
 					새로운 인생 2막을 향해 나아가고 있습니다. 살면서 깨닫고 어려움을 극복한 마음들을
-					글을 통해 함께 나아가며 꿈을 꾸는
+					글을 통해 함께 나아가며 꿈을 키워나가는 작가
 				</p>
-			</div>
+			</header>
 			<picture class="avatar">
-				<source srcset="" type=""/>
-				<source srcset="" type=""/>
-				<img src="" alt="프로필" />
+				<source srcset="/src/assets/profile/profile.avif" type="image/avif" />
+				<source srcset="/src/assets/profile/profile.webp" type="image/webp" />
+				<img src="/src/assets/profile/profile.jpg" alt="프로필" />
 			</picture>
-		</div>
+		</article>
 	</body>
 </html>
