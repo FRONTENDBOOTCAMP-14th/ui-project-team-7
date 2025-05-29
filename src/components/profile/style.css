@@ -1,14 +1,13 @@
 @import '/src/components/avatar/style.css';
 
 .profile-card {
-	--width-size: 310px;
-	--height-size: 150px;
+	--width: 310px;
+
 	display: inline-flex;
 	position: relative;
 
 	.profile-info {
-		inline-size: var(--width-size);
-		block-size: var(--height-size);
+		max-width: var(--width);
 
 		.name {
 			font-size: var(--font-size-2xl);
@@ -33,6 +32,7 @@
 			color: var(--color-font-gray);
 			font-weight: var(--weight-light);
 			font-size: var(--font-size-sm);
+			line-height: 146%;
 			padding-right: var(--spacing-4);
 		}
 	}
