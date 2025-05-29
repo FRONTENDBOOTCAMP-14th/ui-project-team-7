@@ -14,15 +14,15 @@
 }
 
 /* 초기 버튼 비활성 스타일 */
-form:has(input:placeholder-shown) button {
+form:has(input:placeholder-shown, textarea:placeholder-shown) button {
 	background-color: var(--color-white);
 	color: var(--color-font-gray);
 	cursor: not-allowed;
 }
 
 /* 입력값이 있을 때 스타일 변경 */
-form:has(input:not(:placeholder-shown)) button {
+form:has(input:not(:placeholder-shown), textarea:not(:placeholder-shown)) button {
 	background-color: var(--color-primary);
-	color: var(--color-font-light-gray);
+	color: var(--color-white);
 	cursor: pointer;
 }
