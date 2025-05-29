@@ -1,24 +1,25 @@
-:root {
-	--color-white: #fff;
-	--color-font-gray: #959595;
-}
-
 .book-card {
+	--width: 122px;
+	--height: 172px;
+
 	position: relative;
-	width: 122.857px;
-	height: 172px;
+	width: var(--width);
+	height: var(--height);
 	background: url('./bookcover-img/Background.png') center/cover no-repeat;
 	border-radius: 4px;
 	overflow: hidden;
 
 	.book-info {
+		--width: 70px;
+		--height: 92px;
+
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background-color: var(--color-white);
-		width: 70px;
-		height: 92px;
+		width: var(--width);
+		height: var(--height);
 		padding: 10px 9px;
 		display: flex;
 		flex-direction: column;
@@ -31,7 +32,7 @@
 			color: #333;
 			font-size: 10.75px;
 			font-style: normal;
-			font-weight: 300;
+			font-weight: var(--weight-light);
 			line-height: 13.821px;
 			text-align: center;
 		}
@@ -40,7 +41,7 @@
 			color: var(--color-font-gray);
 			font-size: 7.679px;
 			font-style: normal;
-			font-weight: 300;
+			font-weight: var(--weight-light);
 			line-height: 10.75px;
 			text-align: center;
 		}
