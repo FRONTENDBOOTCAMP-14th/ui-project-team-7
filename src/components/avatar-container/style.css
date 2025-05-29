@@ -1,0 +1,49 @@
+.avatar {
+	--size: 80px;
+}
+
+.profile-card {
+	position: relative;
+	max-width: 380px;
+
+	.profile-info {
+		.name {
+			font-size: var(--font-size-2xl);
+			font-weight: var(--weight-medium);
+			line-height: 110%;
+			padding-top: 23px;
+		}
+
+		.job {
+			font-size: var(--font-size-2xs);
+			line-height: 150%;
+			color: var(--color-font-light-gray);
+			margin: 7px 0 23px 0;
+		}
+
+		.desc {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			color: var(--color-font-gray);
+			font-weight: var(--weight-light);
+			font-size: var(--font-size-sm);
+			line-height: 146%;
+			padding-right: var(--spacing-4);
+		}
+	}
+
+	.avatar {
+		img {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: var(--size);
+			aspect-ratio: 1;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+}
