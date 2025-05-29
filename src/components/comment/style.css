@@ -1,4 +1,5 @@
 @import '/src/global.css';
+@import '/src/components/btn/style.css';
 
 .comment-wrapper {
 	/* Box Model */
