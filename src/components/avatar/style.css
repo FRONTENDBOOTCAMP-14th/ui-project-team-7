@@ -1,5 +1,5 @@
 .avatar {
-	--size: 30px;
+	--size: 80px;
 
 	img {
 		width: var(--size);

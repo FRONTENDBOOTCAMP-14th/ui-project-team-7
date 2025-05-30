@@ -1,45 +1,41 @@
 @import '/src/components/avatar/style.css';
 
-.profile-card {
-	--width: 310px;
+.author-profile {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	width: 100%;
 
-	display: inline-flex;
-	position: relative;
+	> header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-	.profile-info {
-		max-width: var(--width);
+		> div {
+			display: flex;
+			flex-direction: column;
+			gap: 7px;
+			justify-content: center;
 
-		.name {
-			font-size: var(--font-size-2xl);
-			font-weight: var(--weight-medium);
-			padding-top: 23px;
-		}
+			> .author-name {
+				font-size: var(--font-size-2xl);
+				font-weight: var(--weight-medium);
+			}
 
-		.job {
-			font-size: var(--font-size-2xs);
-			color: var(--color-font-light-gray);
-			margin: 7px 0 23px 0;
-		}
-
-		.desc {
-			display: -webkit-box;
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
-			-webkit-box-orient: vertical;
-			text-overflow: ellipsis;
-			overflow: hidden;
-
-			color: var(--color-font-gray);
-			font-weight: var(--weight-light);
-			font-size: var(--font-size-sm);
-			line-height: 146%;
-			padding-right: var(--spacing-4);
+			> .author-title {
+				font-size: var(--font-size-sm);
+				color: var(--color-font-light-gray);
+				
+			}
 		}
 	}
 
-	.avatar {
-		position: absolute;
-		top: 20px;
-		right: 20px;
+	> .author-description {
+		font-size: var(--font-size-sm);
+		color: var(--color-font-gray);
+		font-weight: var(--weight-light);
+		line-height: 146%
 	}
 }

@@ -16,20 +16,24 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<article class="profile-card">
-			<header class="profile-info">
-				<h2 class="name">동그라미 원</h2>
-				<p class="job">에세이스트</p>
-				<p class="desc">
-					새로운 인생 2막을 향해 나아가고 있습니다. 살면서 깨닫고 어려움을 극복한 마음들을
-					글을 통해 함께 나아가며 꿈을 키워나가는 작가
-				</p>
+		<article class="author-profile">
+			<header>
+				<div>
+					<h2 class="author-name">작가 이름</h2>
+					<p class="author-title">작가 직업</p>
+				</div>
+				<picture class="avatar">
+					<source srcset="/src/assets/profile/profile.avif" type="image/avif" />
+					<source srcset="/src/assets/profile/profile.webp" type="image/webp" />
+					<img src="/src/assets/profile/profile.jpg" alt="프로필" />
+				</picture>
 			</header>
-			<picture class="avatar">
-				<source srcset="/src/assets/profile/profile.avif" type="image/avif" />
-				<source srcset="/src/assets/profile/profile.webp" type="image/webp" />
-				<img src="/src/assets/profile/profile.jpg" alt="프로필" />
-			</picture>
+			<section class="author-description">
+				<p>
+					작가 상세 설명이 이곳에 들어갑니다. 작가의 경력, 작업 분야, 주요 작품 등에 대한
+					소개를 포함할 수 있습니다.
+				</p>
+			</section>
 		</article>
 	</body>
 </html>
