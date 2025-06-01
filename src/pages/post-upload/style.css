@@ -1,0 +1,179 @@
+/* post-form */
+.post-wrapper {
+	display: flex;
+	flex-flow: column;
+
+	/* 제목, 소제목, 내용 입력 서식 */
+	.post-input {
+		--size: 280px;
+		border-top: 1px solid #d7d7d7;
+		color: var(--color-font-gray);
+		font-size: 20px;
+
+		/* 제목 */
+		&.title {
+			font-size: 24px;
+		}
+
+		/* 제목, 소제목 */
+		& > input {
+			height: 70px;
+			letter-spacing: var(--letter-spacing-tight);
+		}
+
+		/* 내용 */
+		& > textarea {
+			height: var(--size);
+			padding: 26px;
+			resize: none;
+		}
+
+		/* 제목, 소제목, 내용 */
+		input,
+		textarea {
+			width: 100%;
+			border: none;
+			padding-inline: 25px;
+			outline: none;
+			/* cursor color */
+			caret-color: var(--color-primary);
+		}
+	}
+
+	/* 사진, 정렬, 키보드 (아이콘)버튼바 */
+	.post-footer {
+		--size: 40px;
+		--gap: 24px;
+
+		position: absolute;
+		bottom: 100px;
+		width: 100%;
+		background: var(--color-background);
+		padding-block: 22px;
+		display: flex;
+		justify-content: center;
+		gap: var(--gap);
+
+		/* 사진 아이콘 */
+		input::file-selector-button {
+			width: var(--size);
+			aspect-ratio: 1;
+			color: transparent;
+			border: none;
+			background: url(/src/assets/icon/picture.svg);
+		}
+		/* 키보드 아이콘 */
+		& > :last-child {
+			color: var(--color-font-gray);
+			margin-left: calc(166px - var(--gap));
+		}
+
+		/* 키보드 체크박스 폼 */
+		& > .keyboard {
+			--size: 40px;
+			display: flex;
+
+			/* 기본 input스타일 제거 */
+			& > input {
+				margin: 0;
+				appearance: none;
+			}
+
+			/* 아이콘 사이즈 */
+			& > label {
+				width: var(--size);
+				height: var(--size);
+			}
+
+			/* 체크된 경우: svg 숨기고 배경 이미지 보임 */
+			& > input:checked + label {
+				background-image: url(/src/assets/icon/keyboard-on.svg);
+
+				> svg {
+					display: none;
+				}
+			}
+		}
+
+		/* 사진, 정렬, 키보드 아이콘 공통 */
+		[type='button'],
+		[type='file'],
+		[type='checkbox'] {
+			width: var(--size);
+			height: var(--size);
+			border: none;
+			padding: 0;
+			color: var(--color-font-gray);
+			background: transparent;
+		}
+	}
+
+	/* 지우기, 제출하기 버튼 & 글쓰기 헤더 */
+	.post-header {
+		--size: 50px;
+		--gap: 105px;
+
+		order: -1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: var(--gap);
+
+		& > button {
+			width: var(--size);
+			aspect-ratio: 1;
+			background: transparent;
+			border: none;
+			padding: 0;
+			color: var(--color-icon-gray);
+
+			:hover {
+				color: var(--color-primary);
+			}
+		}
+
+		& > span {
+			font-size: var(--font-size-lg);
+			font-weight: var(--weight-semibold);
+		}
+	}
+}
+/* @import해서 쓸 예정 (네비게이션 컴포넌트) */
+.nav-bar {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+
+	.nav-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 34px;
+		height: 100%;
+		margin: 0;
+		list-style: none;
+
+		> li {
+			display: flex;
+
+			> .nav-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-decoration: none;
+				color: #111111;
+				font-size: 12px;
+
+				> svg {
+					display: block;
+				}
+
+				> span {
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+}
