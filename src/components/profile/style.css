@@ -1,5 +1,19 @@
 @import '/src/components/avatar/style.css';
 
+.avatar {
+	--size: 80px;
+}
+
+.author-name {
+	--color: #333;
+	--font-name-size: 22px;
+}
+
+.author-title,
+.author-description {
+	--font-normal-size: 12px;
+}
+
 .author-profile {
 	display: flex;
 	flex-direction: column;
@@ -11,7 +25,8 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
+		margin-bottom: -5px;
 
 		> div {
 			display: flex;
@@ -20,22 +35,23 @@
 			justify-content: center;
 
 			> .author-name {
-				font-size: var(--font-size-2xl);
+				color: var(--color);
+				font-size: var(--font-name-size);
 				font-weight: var(--weight-medium);
 			}
 
 			> .author-title {
-				font-size: var(--font-size-sm);
-				color: var(--color-font-light-gray);
-				
+				color: var(--color-font-gray);
+				font-size: var(--font-normal-size);
+				font-weight: var(--weight-medium);
 			}
 		}
 	}
 
 	> .author-description {
-		font-size: var(--font-size-sm);
 		color: var(--color-font-gray);
-		font-weight: var(--weight-light);
-		line-height: 146%
+		font-size: var(--font-normal-size);
+		font-weight: var(--weight-medium);
+		line-height: 20px;
 	}
 }
