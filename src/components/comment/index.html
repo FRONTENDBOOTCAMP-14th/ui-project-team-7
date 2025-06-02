@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Comment 컴포넌트</title>
+		<link rel="icon" href="/vite.svg" />
+		<link
+			rel="preload"
+			as="font"
+			href="/font/woff2/PretendardVariable.woff2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<form method="POST" action="" class="comment-wrapper">
+			<div class="comment-contents">
+				<figure class="comment-header">
+					<picture class="avatar">
+						<source srcset="/src/assets/profile/profile.avif" type="image/avif" />
+						<source srcset="/src/assets/profile/profile.webp" type="image/webp" />
+						<img src="/src/assets/profile/profile.jpg" alt="프로필" />
+					</picture>
+					<figcaption>별명</figcaption>
+				</figure>
+				<label for="comment" class="sr-only">댓글 입력</label>
+				<textarea
+					name="comment"
+					id="comment"
+					placeholder="댓글을 입력하세요."
+					required
+				></textarea>
+			</div>
+			<div class="comment-footer">
+				<button type="submit" class="erl-btn">등록</button>
+			</div>
+		</form>
+	</body>
+</html>

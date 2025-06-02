@@ -1,0 +1,40 @@
+@import './auth-input.css';
+
+.auth-input.sign-up {
+	/* Layout & Flex */
+	display: flex;
+	align-items: center;
+
+	& > .auth-input-valid {
+		/* Box Model */
+		position: absolute;
+		top: calc(100% + var(--spacing-2));
+		display: none;
+		/* Typography */
+		font-size: 12px;
+		letter-spacing: var(--letter-spacing-tight);
+		/* Visual */
+		color: var(--color-primary);
+	}
+
+	& > input:valid + .auth-input-error + .auth-input-valid {
+		display: block;
+	}
+
+	& > .duplicate-check-button {
+		/* Box Model */
+		width: 65px;
+		height: 29px;
+		/* Visual */
+		background-color: transparent;
+		border: 1px solid currentColor;
+		border-radius: 14.5px;
+		color: var(--color-primary);
+		/* Typography */
+		font-size: var(--font-size-xs);
+	}
+
+	&:has(input:invalid) .duplicate-check-button {
+		color: var(--color-font-light-gray);
+	}
+}
