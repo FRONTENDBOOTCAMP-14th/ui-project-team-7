@@ -1,16 +1,13 @@
 @import '/src/global.css';
+@import '/src/components/header/style.css';
 @import '/src/components/comment/style.css';
 @import '/src/components/btn/style.css';
 @import '/src/components/avatar/style.css';
 @import '/src/components/profile/style.css';
 
-:root {
-	--font-size-28: 28px;
-	--color-font-dark-gray: #666;
-}
-
 body {
 	color: var(--color-font-black);
+	--color-font-666: #666;
 
 	.post-container {
 		display: flex;
@@ -19,6 +16,8 @@ body {
 	}
 
 	.post-header {
+		--font-size-28: 28px;
+
 		position: relative;
 		overflow: hidden;
 		color: currentColor;
@@ -27,12 +26,23 @@ body {
 	}
 
 	.post-header > .background-image {
+		width: 100%;
+		background-size: cover;
+		width: auto;
 		position: absolute;
 		inset: 0;
 		z-index: 0;
 		object-fit: cover;
 		filter: brightness(1);
+	
+		> img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
 	}
+
+
 
 	.post-header > h1,
 	.post-header > h2,
@@ -49,7 +59,7 @@ body {
 	.post-header > h2 {
 		font-size: var(--font-size-sm);
 		font-weight: var(--weight-light);
-		color: var(--color-font-dark-gray);
+		color: var(--color-font-666);
 		margin-top: 0.3rem;
 	}
 
@@ -69,13 +79,15 @@ body {
 			a {
 				text-decoration: none;
 				font-style: normal;
-				color: var(--color-font-dark-gray);
+				color: var(--color-font-666);
 			}
 		}
 	}
 
 	/* post 본문 */
 	.post-body {
+		--font-size-14: 14px;
+
 		display: flex;
 		flex-direction: column;
 		gap: 1.75rem;
@@ -84,8 +96,9 @@ body {
 		> p {
 			text-align: left;
 			text-indent: 0.5rem;
-			line-height: 161%;
+			font-size: var(--font-size-base);
 			font-weight: var(--weight-light);
+			line-height: 161%;
 		}
 
 		> figure {
@@ -98,14 +111,20 @@ body {
 			}
 		}
 
+		.post-image > img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
 		a {
 			display: inline-block;
-			color: var(--color-font-dark-gray);
+			color: var(--color-font-666);
 			border: 1px solid #e0e0e0;
 			border-radius: 25px;
 			padding: 0.4rem 0.8rem;
-			font-size: 0.875rem;
-			font-weight: 400;
+			font-size: var(--font-size-14);
+			font-weight: var(--weight-medium);
 			white-space: nowrap;
 		}
 	}
@@ -122,6 +141,12 @@ body {
 
 	/* 댓글 */
 	.comments {
+		--border-white-gray: #eee;
+		--color-black: #111;
+		--font-size-12: 12px;
+		--font-size-14: 14px;
+		--font-size-16: 16px;
+
 		padding-top: 1rem;
 		display: flex;
 		flex-direction: column;
@@ -156,12 +181,12 @@ body {
 	}
 
 	.comment-info > .author {
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-14);
 		font-weight: var(--weight-medium);
 	}
 
 	.comment-info > time {
-		font-size: var(--font-size-2xs);
+		font-size: var(--font-size-12);
 		color: var(--color-font-gray);
 		margin-top: 0.125rem;
 	}
@@ -175,42 +200,46 @@ body {
 	}
 
 	.comment > .content {
-		font-size: 0.875rem;
-		color: #444;
+		font-size: var(--font-size-16);
+		color: var(--color-black);
+		font-weight: var(--weight-medium);
 		line-height: 1.6;
 		margin-left: 60px;
 	}
 
+	.comments li:nth-child(2) {
+		border-block: 1px solid var(--border-white-gray);
+		padding-block-start: 29px;
+		padding-block-end: 34px;
+	}
+
 	/* 댓글 토글 */
-	.comment-toggle {
-		/* 버튼처럼 보이게 만들 label */
-		label[for='toggle'] {
-			display: flex;
-			justify-content: start;
-			margin-left: 60px;
-			background: none;
-			border: none;
-			color: var(--color-font-gray);
-			margin-top: 0.875rem;
-			font-size: var(--font-size-sm);
-			cursor: pointer;
-		}
 
-		#toggle {
-			display: none;
-		}
+	.toggle-checkbox {
+		display: none;
+	}
+	/* 버튼처럼 보이게 만들 label */
+	.toggle-label {
+		display: flex;
+		justify-content: start;
+		margin-left: 60px;
+		background: none;
+		border: none;
+		color: var(--color-font-gray);
+		margin-top: 12px;
+		font-size: var(--font-size-sm);
+		cursor: pointer;
+	}
 
-		#toggle ~ .comment-wrapper {
-			display: none;
-		}
+	.comment-wrapper {
+		display: none;
+	}
 
-		/* 체크되면 댓글쓰기 버튼 숨기고 폼 보이기 */
-		#toggle:checked ~ label {
-			display: none;
-		}
+	.toggle-checkbox:checked + .toggle-label {
+		display: none;
+	}
 
-		#toggle:checked ~ .comment-wrapper {
-			display: block;
-		}
+	.toggle-checkbox:checked + .toggle-label + .comment-wrapper {
+		display: block;
 	}
 }
