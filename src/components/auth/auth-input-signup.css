@@ -25,6 +25,8 @@
 		/* Box Model */
 		width: 65px;
 		height: 29px;
+		/* Layout & Flex */
+		flex-shrink: 0;
 		/* Visual */
 		background-color: transparent;
 		border: 1px solid currentColor;
