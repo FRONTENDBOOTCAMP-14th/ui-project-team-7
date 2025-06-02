@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>컴포넌트</title>
+		<link rel="icon" href="/vite.svg" />
+		<link
+			rel="preload"
+			as="font"
+			href="/font/woff2/PretendardVariable.woff2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+		<link rel="stylesheet" href="/src/global.css" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<form action="" method="POST">
+			<!-- input box -->
+			<div class="auth-input">
+				<!-- 여러 input을 사용할 경우 각각 다른(고유한) id, name을 사용해주세요 -->
+				<label for="auth-input" class="sr-only">레이블 이름</label>
+				<input
+					type="text"
+					id="auth-input"
+					name="auth-input"
+					class="auth-input"
+					placeholder="여기에 placeholder"
+					minlength="3"
+					maxlength="10"
+					required
+				/>
+				<span class="auth-input-error">에러 메시지</span>
+			</div>
+
+			<div style="height: 50px"></div>
+
+			<!-- input box 회원 가입 시 중복 확인 필요 -->
+			<div class="auth-input sign-up">
+				<!-- 여러 input을 사용할 경우 각각 다른(고유한) id, name을 사용해주세요 -->
+				<label for="auth-input" class="sr-only">레이블 이름</label>
+				<input
+					type="text"
+					id="auth-input"
+					name="auth-input"
+					class="auth-input"
+					placeholder="여기에 placeholder"
+					minlength="3"
+					maxlength="10"
+					required
+				/>
+				<span class="auth-input-error">에러 메시지</span>
+				<span class="auth-input-valid">사용 가능한~</span>
+				<button type="button" class="duplicate-check-button">중복확인</button>
+			</div>
+
+			<div style="height: 50px"></div>
+
+			<!-- 타입은 용도에 따라 사용 시 변경해주세요 -->
+			<button type="submit" class="auth-button">
+				<!-- 여기 선택적으로 아이콘 넣어주세요 -->
+				<!-- <img src="/img/google.svg" alt="Google" /> -->
+				버튼 텍스트
+			</button>
+		</form>
+
+		<div style="height: 50px"></div>
+
+		<a href="#" class="auth-button">
+			<!-- 그냥 버튼 링크 -->
+			<!-- <img src="/img/google.svg" alt="Google" /> -->
+			버튼 텍스트
+		</a>
+	</body>
+</html>
