@@ -1,5 +1,13 @@
 /* https://piccalil.li/blog/a-modern-css-reset */
 
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
 /* Box sizing rules */
 body *,
 body *::before,
@@ -64,14 +72,6 @@ iframe,
 video {
 	width: 100%;
 	display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-	font: inherit;
 }
 
 button {
