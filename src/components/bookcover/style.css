@@ -1,49 +1,43 @@
-.book-card {
+:root {
 	--width: 122px;
 	--height: 172px;
+	--info-width: 70px;
+	--info-height: 92px;
+	--booktitle-size: 10.75px;
+	--bookauthor-size: 7.6px;
+}
 
+.book-card {
 	position: relative;
-	width: var(--width);
-	height: var(--height);
-	background: url('./bookcover-img/Background.png') center/cover no-repeat;
-	border-radius: 4px;
-	overflow: hidden;
+	display: inline-block;
+}
+.book-image img {
+	display: block;
+}
+.book-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--color-white);
+	width: var(--info-width);
+	height: var(--info-height);
+	padding: 10px 9px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	box-sizing: border-box;
 
-	.book-info {
-		--width: 70px;
-		--height: 92px;
+	.book-title {
+		color: #333;
+		font-size: var(--booktitle-size);
+		font-weight: var(--weight-light);
+	}
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: var(--color-white);
-		width: var(--width);
-		height: var(--height);
-		padding: 10px 9px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: start;
-		gap: 10px;
-		box-sizing: border-box;
-
-		.book-title {
-			color: #333;
-			font-size: 10.75px;
-			font-style: normal;
-			font-weight: var(--weight-light);
-			line-height: 13.821px;
-			text-align: center;
-		}
-
-		.book-author {
-			color: var(--color-font-gray);
-			font-size: 7.679px;
-			font-style: normal;
-			font-weight: var(--weight-light);
-			line-height: 10.75px;
-			text-align: center;
-		}
+	.book-author {
+		color: var(--color-font-gray);
+		font-size: var(--bookauthor-size);
+		font-weight: var(--weight-light);
 	}
 }
