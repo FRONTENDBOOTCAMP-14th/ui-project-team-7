@@ -2,6 +2,7 @@
 @import '/src/components/comment/style.css';
 @import '/src/components/btn/style.css';
 @import '/src/components/avatar/style.css';
+@import '/src/components/profile/style.css';
 
 :root {
 	--font-size-28: 28px;
@@ -68,7 +69,13 @@ body {
 		}
 
 		> span {
-			color: var(--color-font-gray);
+			color: var(--color-font-light-gray);
+		
+			a {
+				text-decoration: none;
+				font-style: normal;
+				color: var(--color-font-dark-gray);
+			}
 		}
 	}
 
