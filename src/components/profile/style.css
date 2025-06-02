@@ -1,17 +1,16 @@
 @import '/src/components/avatar/style.css';
 
-body {
-	--color-333: #333;
-	--color-666: #666;
-	--font-size-normal: .75rem;
-	--font-size-name: 1.375rem;
-}
 
 .avatar {
 	--size: 5rem;
 }
 
 .author-profile {
+	--color-333: #333;
+	--color-666: #666;
+	--font-size-normal: .75rem;
+	--font-size-name: 1.375rem;
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
