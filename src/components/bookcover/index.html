@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>bookcard 컴포넌트</title>
+		<link rel="icon" href="/vite.svg" />
+		<link
+			rel="preload"
+			as="font"
+			href="/font/woff2/PretendardVariable.woff2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+		<link rel="stylesheet" href="/src/global.css" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<figure class="book-card">
+			<picture class="book-image">
+				<source srcset="/src/assets/bookcover-img/background1.avif" type="image/avif" />
+				<source srcset="/src/assets/bookcover-img/background1.jpg" type="image/jpg" />
+				<source srcset="/src/assets/bookcover-img/background1.webp" type="image/webp" />
+				<img
+					src="/src/assets/bookcover-img/background.jpg"
+					alt="책사진"
+					aria-labelledby="book-title"
+				/>
+			</picture>
+			<figcaption>
+				<div class="book-info">
+					<em class="book-title">강남 안에,<br />강북 남자</em>
+					<span class="book-author">눅눅한과자</span>
+				</div>
+				<span class="book-logo">brunch book</span>
+			</figcaption>
+		</figure>
+	</body>
+</html>

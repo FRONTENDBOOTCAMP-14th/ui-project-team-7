@@ -1,0 +1,52 @@
+@import './reset.css';
+
+/* 접근성 관련 CSS */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+:root {
+	--color-primary: #00c6be;
+	--color-white: #fff;
+
+	--color-background: #f8f8f8;
+
+	--color-font-black: #000;
+	--color-font-gray: #959595;
+	--color-font-light-gray: #bebebe;
+
+	--color-border-header: #e0e0e0;
+	--color-border-gray: #eee;
+
+	--spacing-1: 5px;
+	--spacing-2: 8px;
+	--spacing-3: 10px;
+	--spacing-4: 12px;
+	--spacing-5: 14px;
+	--spacing-6: 17px;
+	--spacing-7: 20px;
+	--spacing-8: 30px;
+
+	--letter-spacing-tight: -0.3px;
+
+	--font-size-2xs: 11px;
+	--font-size-xs: 13px;
+	--font-size-sm: 15px;
+	--font-size-base: 17px;
+	--font-size-lg: 19px;
+	--font-size-xl: 20px;
+	--font-size-2xl: 24px;
+
+	--weight-light: 300;
+	--weight-medium: 400;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+}

@@ -1,0 +1,59 @@
+@import '/src/components/avatar/style.css';
+
+.avatar {
+	--size: 5rem;
+}
+
+.author-profile {
+	--color-333: #333;
+	--color-666: #666;
+	--font-size-3xl: 30px;
+	--font-size-normal: 0.75rem;
+	--font-size-name: 1.375rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 28px;
+	width: 100%;
+
+	> header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			gap: 0.4375rem;
+			justify-content: center;
+			margin-bottom: -0.3125rem;
+
+			> .writer {
+				color: var(--color-333);
+				font-size: var(--font-size-3xl);
+				font-weight: var(--weight-medium);
+			}
+
+			> .author-title {
+				color: var(--color-font-gray);
+				font-size: var(--font-size-normal);
+				font-weight: var(--weight-light);
+			}
+		}
+	}
+
+	> .author-description {
+		color: var(--color-666);
+		font-size: var(--font-normal-size);
+		font-weight: var(--weight-light);
+		line-height: 1.375rem;
+
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
