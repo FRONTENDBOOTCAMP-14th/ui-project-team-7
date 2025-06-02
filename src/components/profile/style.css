@@ -1,6 +1,5 @@
 @import '/src/components/avatar/style.css';
 
-
 .avatar {
 	--size: 5rem;
 }
@@ -8,7 +7,8 @@
 .author-profile {
 	--color-333: #333;
 	--color-666: #666;
-	--font-size-normal: .75rem;
+	--font-size-3xl: 30px;
+	--font-size-normal: 0.75rem;
 	--font-size-name: 1.375rem;
 
 	display: flex;
@@ -26,13 +26,13 @@
 		> div {
 			display: flex;
 			flex-direction: column;
-			gap: .4375rem;
+			gap: 0.4375rem;
 			justify-content: center;
 			margin-bottom: -0.3125rem;
 
 			> .author-name {
 				color: var(--color-333);
-				font-size: var(--font-size-name);
+				font-size: var(--font-size-3xl);
 				font-weight: var(--weight-medium);
 			}
 
@@ -49,5 +49,11 @@
 		font-size: var(--font-normal-size);
 		font-weight: var(--weight-medium);
 		line-height: 1.375rem;
+
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 }
