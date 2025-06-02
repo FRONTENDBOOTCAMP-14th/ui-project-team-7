@@ -5,6 +5,7 @@ body *,
 body *::before,
 body *::after {
 	box-sizing: border-box;
+	font-family: 'Pretendard Variable', sans-serif;
 }
 
 /* Remove default margin */
