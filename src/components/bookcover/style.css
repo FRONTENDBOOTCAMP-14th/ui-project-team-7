@@ -1,13 +1,11 @@
-:root {
+.book-card {
 	--width: 122px;
 	--height: 172px;
 	--info-width: 70px;
 	--info-height: 92px;
 	--booktitle-size: 10.75px;
 	--bookauthor-size: 7.6px;
-}
 
-.book-card {
 	position: relative;
 	display: inline-block;
 }
@@ -33,6 +31,7 @@
 		color: #333;
 		font-size: var(--booktitle-size);
 		font-weight: var(--weight-light);
+		font-style: normal;
 	}
 
 	.book-author {
@@ -40,4 +39,14 @@
 		font-size: var(--bookauthor-size);
 		font-weight: var(--weight-light);
 	}
+}
+
+.book-logo {
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 6px;
+	font-weight: bold;
+	color: var(--color-white);
 }
