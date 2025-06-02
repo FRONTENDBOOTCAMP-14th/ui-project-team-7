@@ -30,7 +30,7 @@
 			justify-content: center;
 			margin-bottom: -0.3125rem;
 
-			> .author-name {
+			> .writer {
 				color: var(--color-333);
 				font-size: var(--font-size-3xl);
 				font-weight: var(--weight-medium);
