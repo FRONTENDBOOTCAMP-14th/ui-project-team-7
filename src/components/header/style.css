@@ -1,4 +1,5 @@
 @import '/src/global.css';
+@import '/src/components/avatar/style.css';
 
 :root {
 	--color-icon-gray: #444444;

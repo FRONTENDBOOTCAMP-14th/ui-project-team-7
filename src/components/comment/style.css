@@ -1,5 +1,10 @@
 @import '/src/global.css';
 @import '/src/components/btn/style.css';
+@import '/src/components/avatar/style.css';
+
+.avatar {
+	--size: 18px;
+}
 
 .comment-wrapper {
 	/* Box Model */
