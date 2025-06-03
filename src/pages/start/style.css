@@ -5,14 +5,9 @@
 	--color: #333;
 	--background-color: #ffe500;
 	--border-radius: 6px;
-	/* Box Model */
-	width: 100%;
-	height: 50px;
 }
 
 .start-page {
-	/* padding-block-start: 70px;
-	padding-block-end: 100px; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -30,7 +25,6 @@
 		gap: var(--spacing-8);
 
 		.auth-button {
-			width: 100%;
 			max-width: 800px;
 		}
 
