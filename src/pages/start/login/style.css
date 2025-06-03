@@ -122,6 +122,10 @@
 
 	/* Visual */
 	color: #4b4b4b;
+
+	/* Typography */
+	font-size: var(--font-size-xs);
+	line-height: 1.25rem;
 }
 
 .save-id .checkbox-icon {
