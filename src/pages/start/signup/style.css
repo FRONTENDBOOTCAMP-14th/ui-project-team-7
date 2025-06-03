@@ -1,0 +1,166 @@
+@import '/src/components/auth/auth-button.css';
+
+.start-page {
+	/* Box Model */
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	padding-inline: 1.25rem;
+	/* Layout */
+	flex-direction: column;
+	align-items: center;
+
+	h1 {
+		/* Box Model */
+		margin-block: 58px 44px;
+		/* Typography */
+		text-align: center;
+		font-size: var(--font-size-lg);
+		font-weight: 700;
+		color: #111;
+	}
+
+	form {
+		/* Box Model */
+		display: flex;
+		width: 100%;
+		max-width: 800px;
+		height: 100%;
+		/* Layout */
+		flex-direction: column;
+		gap: 114px;
+
+		.inputs {
+			/* Box Model */
+			margin-block-end: var(--spacing-7);
+
+			& > div {
+				/* Box Model */
+				margin-block-end: var(--spacing-1);
+
+				&:last-child {
+					margin-block-end: 0;
+				}
+			}
+
+			.id-input,
+			.email-input {
+				/* Box Model */
+				position: relative;
+
+				& > .error-message,
+				& > .confirm-message {
+					/* Box Model */
+					position: absolute;
+					left: 0;
+					top: calc(43px + 10px);
+				}
+			}
+
+			.id-input,
+			.email-input,
+			.pw-input,
+			.pw-confirm-input {
+				/* Box Model */
+				display: flex;
+				width: 100%;
+				/* Layout */
+				flex-direction: column;
+				gap: var(--spacing-2);
+
+				input {
+					/* Box Model */
+					display: flex;
+					width: 100%;
+					height: 43px;
+					flex-shrink: 0;
+					border: none;
+					border-bottom: 1px solid #d7d7d7;
+					outline: none;
+					/* Typography */
+					font-size: var(--font-size-sm);
+					color: #8e8e8e;
+
+					&:focus {
+						border-bottom: 2px solid var(--color-primary);
+					}
+				}
+
+				& > .error-message,
+				& > .confirm-message {
+					/* Box Model */
+					display: none;
+					/* Typography */
+					font-size: 0.75rem;
+					font-weight: 300;
+				}
+
+				& > .confirm-message {
+					color: var(--color-primary);
+				}
+				& > .error-message {
+					color: #fc3b75;
+				}
+
+				/* input이 유효하지 않거나, 중복확인 버튼이 눌리지 않은 경우 */
+				input:user-invalid + .error-message,
+				.input-with-confirm:has(input:user-valid + input[type='checkbox']:not(:checked))
+					~ .error-message {
+					display: block;
+				}
+
+				/* input이 유효하고 중복확인 버튼이 눌린 경우 confirm-message 표시 */
+				.input-with-confirm:has(input:user-valid + input[type='checkbox']:checked)
+					~ .confirm-message {
+					display: block;
+				}
+
+				/* input이 유효하고 중복확인 버튼이 눌린 경우 error-message 숨김 */
+				.input-with-confirm:has(input:user-valid + input[type='checkbox']:checked)
+					~ .error-message {
+					display: none;
+				}
+
+				/* input이 유효하지 않고 중복확인 버튼이 눌린 경우 error-message 표시 */
+				.input-with-confirm:has(input:user-invalid + input[type='checkbox']:checked)
+					~ .error-message {
+					display: block;
+				}
+			}
+
+			.input-with-confirm {
+				/* Box Model */
+				display: flex;
+				margin-block-end: 2.25rem;
+				/* Layout */
+				align-items: center;
+
+				.confirm-button {
+					/* Box Model */
+					position: absolute;
+					right: 0;
+					width: 65px;
+					height: 29px;
+					margin: auto;
+					padding: 0;
+					border: 1px solid currentColor;
+					border-radius: 14.5px;
+					/* Background */
+					background-color: transparent;
+					/* Typography */
+					font-size: var(--font-size-xs);
+					line-height: 29px;
+					text-align: center;
+					color: var(--color-primary);
+					/* Miscellaneous */
+					cursor: pointer;
+				}
+			}
+		}
+
+		.auth-button {
+			/* Box Model */
+			width: 100%;
+		}
+	}
+}
