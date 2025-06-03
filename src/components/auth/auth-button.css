@@ -21,7 +21,7 @@
 	font-size: var(--font-size-sm);
 }
 
-form:has(input:invalid, textarea:invalid) .auth-button {
+form:has(input:invalid, textarea:invalid) button.auth-button {
 	/* Miscellaneous */
 	cursor: not-allowed;
 	/* Visual */
