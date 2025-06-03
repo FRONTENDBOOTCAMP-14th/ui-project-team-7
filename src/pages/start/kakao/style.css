@@ -9,7 +9,6 @@
 .kakao-login-container {
 	/* Box Model */
 	width: 100%;
-	min-width: 18.75rem; /* 300px */
 	padding-inline: 1.25rem; /* 20px */
 	padding-block-start: 2.75rem;
 
@@ -22,6 +21,8 @@
 .kakao-login-form {
 	/* Box Model */
 	width: 100%;
+	min-width: 18.75rem; /* 300px */
+	max-width: 800px; /* 300px */
 	margin-block-end: var(--spacing-6);
 
 	/* Layout */

@@ -4,6 +4,9 @@
 .start-page {
 	/* Box Model */
 	width: 100%;
+	min-height: 100vh;
+	max-width: 800px;
+	margin-inline: auto;
 	padding-inline: 1.25rem;
 
 	/* Layout */
