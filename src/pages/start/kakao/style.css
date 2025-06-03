@@ -1,0 +1,226 @@
+@import '/src/components/auth/style.css';
+
+.auth-button {
+	/* Visual */
+	--background-color: #fee500;
+	--color: #333;
+}
+
+.kakao-login-container {
+	/* Box Model */
+	width: 100%;
+	min-width: 18.75rem; /* 300px */
+	padding-inline: 1.25rem; /* 20px */
+	padding-block-start: 2.75rem;
+
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.kakao-login-form {
+	/* Box Model */
+	width: 100%;
+	margin-block-end: var(--spacing-6);
+
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem; /* 30px */
+}
+
+.kakao-login-form em {
+	/* Box Model */
+	width: 100%;
+
+	/* Typography */
+	text-align: center;
+	font-size: 0.875rem; /* 14px */
+	line-height: 1.125rem; /* 18px */
+}
+
+.kakao-login-form .inputs {
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	gap: 1.4375rem; /* 23px */
+}
+
+.id-and-pw {
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	gap: 0.1875rem; /* 3px */
+}
+
+.id-and-pw input {
+	/* Box Model */
+	width: 100%;
+	height: 2.6875rem; /* 43px */
+	border: none;
+	border-bottom: 0.0625rem solid #d7d7d7; /* 1px */
+
+	/* Typography */
+	font-size: 1rem; /* 16px */
+	letter-spacing: var(--letter-spacing-tight);
+}
+
+.id-and-pw input:focus {
+	/* Box Model */
+	outline: none;
+	border-color: #191919;
+}
+
+.id-and-pw .error-message {
+	/* Box Model */
+	display: none;
+	margin-block-start: 0.1875rem; /* 3px */
+
+	/* Typography */
+	font-size: 0.75rem; /* 12px */
+
+	/* Visual */
+	color: #ff0000;
+}
+
+.id-and-pw input:user-invalid + .error-message {
+	/* Box Model */
+	display: block;
+}
+
+.save-id {
+	/* Layout */
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3); /* 24px */
+}
+
+.save-id > input[type='checkbox']:focus-visible + label {
+	/* Box Model */
+	outline: 2px solid #4f46e5;
+}
+
+.save-id label {
+	/* Layout */
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-2);
+
+	/* Visual */
+	color: #4b4b4b;
+}
+
+.save-id .checkbox-icon {
+	/* Box Model */
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+}
+
+.save-id .checkbox-icon img {
+	/* Box Model */
+	display: none;
+}
+
+.save-id > input[type='checkbox']:checked + label > span {
+	/* Box Model */
+	border: none;
+}
+
+.save-id > input[type='checkbox']:checked + label > span img {
+	/* Box Model */
+	display: block;
+}
+
+.save-id button {
+	/* Box Model */
+	position: relative;
+	border: none;
+	background: none;
+	width: 1.125rem;
+	height: 1.125rem;
+	padding: 0;
+
+	/* Interactivity */
+	cursor: pointer;
+}
+
+/* before: 투명한 배경, after: 투명한 배경 + 텍스트 */
+.save-id button::before,
+.save-id button::after {
+	/* Box Model */
+	position: absolute;
+	top: calc(100% + 0.5rem);
+	left: 50%;
+	transform: translateX(-50%);
+	width: 304px;
+	height: 70px;
+	max-width: 18.75rem;
+	padding: 1rem;
+}
+
+.save-id button::before {
+	/* Box Model */
+	z-index: 1;
+	border-radius: 0.1875rem;
+
+	/* Visual */
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+
+	/* Typography */
+	content: '';
+
+	/* Display */
+	display: none;
+}
+
+.save-id button::after {
+	/* Box Model */
+	z-index: 2;
+
+	/* Typography */
+	content: '로그인한 계정의 정보가 저장됩니다. 개인정보 보호를 위해 개인 기기에서만 사용해 주세요.';
+	font-size: 0.75rem;
+	line-height: 18px;
+	text-align: left;
+	color: white;
+
+	/* Display */
+	display: none;
+}
+
+.save-id button:focus::before,
+.save-id button:focus::after {
+	display: block;
+}
+
+.kakao-login-container .links {
+	/* Box Model */
+	width: 100%;
+
+	/* Layout */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.kakao-login-container .links a {
+	/* Box Model */
+	min-width: 6.25rem; /* 100px */
+
+	/* Typography */
+	font-size: 0.703125rem; /* 11.25px */
+	text-align: center;
+
+	/* Visual */
+	color: #7d7d7d;
+}
+
+.kakao-login-container .links a:not(:last-child) {
+	/* Box Model */
+	border-right: 1px solid currentColor;
+}
