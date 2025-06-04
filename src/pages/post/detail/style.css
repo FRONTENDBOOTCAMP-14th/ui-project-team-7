@@ -345,6 +345,10 @@ h3 {
 	padding-inline: 20px;
 }
 
+.author-profile > avatar {
+	--size: 50px;
+}
+
 .author-profile > header {
 	padding-inline: 20px;
 }
