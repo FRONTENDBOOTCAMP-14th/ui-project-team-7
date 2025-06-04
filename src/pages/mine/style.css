@@ -46,7 +46,6 @@ h2 {
 
 .slider {
 	width: 100%;
-
 	display: flex;
 	gap: 26px;
 	overflow-x: auto;
