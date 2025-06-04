@@ -53,15 +53,21 @@ main {
 		em {
 			font-weight: var(--weight-bold);
 		}
-		ul {
+		ul,
+		.retrospect {
 			font-size: var(--font-size-sm);
 			margin-top: 10px;
 			padding-top: 10px;
 			border-top: 3px solid var(--color-border-gray);
+		}
+		ul {
 			display: flex;
 			flex-direction: column;
 			gap: 5px;
 			text-decoration: underline;
+		}
+		.retrospect {
+			display: block;
 		}
 	}
 }
