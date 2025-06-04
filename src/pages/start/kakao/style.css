@@ -96,6 +96,9 @@
 }
 
 .save-id {
+	/* Box Model */
+	z-index: 2;
+
 	/* Layout */
 	display: flex;
 	align-items: center;
@@ -113,17 +116,21 @@
 
 	/* Miscellaneous */
 	cursor: pointer;
+
+	.label-text {
+		margin-inline-start: 28px;
+		line-height: 20px;
+	}
 }
 
 .relative {
 	position: relative;
 	/* Box Model */
-	width: 1.25rem;
+	width: 164.5px;
 	height: 1.25rem;
 
 	/* Layout & Flex/Grid */
 	display: flex;
-	justify-content: center;
 	align-items: center;
 
 	input,
@@ -149,20 +156,19 @@
 	height: 1.25rem;
 	border: 1px solid currentColor;
 	border-radius: 50%;
-	z-index: 2;
 }
 
-.save-id .checkbox-icon img {
+.save-id img {
 	/* Box Model */
 	display: none;
 }
 
-.save-id input[type='checkbox']:checked + span {
+.save-id input[type='checkbox']:checked + label span {
 	/* Box Model */
 	border: none;
 }
 
-.save-id input[type='checkbox']:checked + span img {
+.save-id input[type='checkbox']:checked + label img {
 	/* Box Model */
 	display: block;
 }
