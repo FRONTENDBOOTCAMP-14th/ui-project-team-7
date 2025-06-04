@@ -31,13 +31,12 @@
 								minlength="4"
 								maxlength="16"
 							/>
-							<input
-								type="checkbox"
-								id="username-confirmed"
-								class="sr-only"
-								required
-							/>
-							<label for="username-confirmed" class="confirm-button">중복확인</label>
+							<div class="relative">
+								<input type="checkbox" id="username-confirmed" required />
+								<label for="username-confirmed" class="confirm-button"
+									>중복확인</label
+								>
+							</div>
 						</div>
 						<span class="error-message"
 							>별명을 조건에 맞게 입력하고 중복 여부를 확인해주세요.</span
@@ -54,8 +53,10 @@
 								placeholder="이메일"
 								required
 							/>
-							<input type="checkbox" id="email-confirmed" class="sr-only" required />
-							<label for="email-confirmed" class="confirm-button">중복확인</label>
+							<div class="relative">
+								<input type="checkbox" id="email-confirmed" required />
+								<label for="email-confirmed" class="confirm-button">중복확인</label>
+							</div>
 						</div>
 						<span class="error-message"
 							>이메일을 조건에 맞게 입력하고 중복 여부를 확인해주세요.</span

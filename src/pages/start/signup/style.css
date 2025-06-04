@@ -68,7 +68,8 @@
 				flex-direction: column;
 				gap: var(--spacing-2);
 
-				input {
+				& > input,
+				& > .input-with-confirm > input {
 					/* Box Model */
 					display: flex;
 					width: 100%;
@@ -110,7 +111,7 @@
 				}
 
 				/* input이 유효하고 중복확인 버튼이 눌린 경우 confirm-message 표시 */
-				.input-with-confirm:has(input:user-valid + input[type='checkbox']:checked)
+				.input-with-confirm:has(input:user-valid + .relative input[type='checkbox']:checked)
 					~ .confirm-message {
 					display: block;
 				}
@@ -122,7 +123,9 @@
 				}
 
 				/* input이 유효하지 않고 중복확인 버튼이 눌린 경우 error-message 표시 */
-				.input-with-confirm:has(input:user-invalid + input[type='checkbox']:checked)
+				.input-with-confirm:has(
+						input:user-invalid + .relative > input[type='checkbox']:checked
+					)
 					~ .error-message {
 					display: block;
 				}
@@ -135,18 +138,37 @@
 				/* Layout */
 				align-items: center;
 
+				.relative {
+					flex-shrink: 0;
+					position: relative;
+					right: 65px;
+					width: 65px;
+					height: 29px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					input {
+						appearance: none;
+					}
+
+					input,
+					.confirm-button {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+					}
+				}
 				.confirm-button {
 					/* Box Model */
 					position: absolute;
-					right: 0;
-					width: 65px;
-					height: 29px;
+					z-index: 2;
 					margin: auto;
 					padding: 0;
 					border: 1px solid currentColor;
 					border-radius: 14.5px;
 					/* Visual */
-					background-color: transparent;
+					background-color: var(--color-white);
 					/* Typography */
 					font-size: var(--font-size-xs);
 					line-height: 29px;
@@ -154,10 +176,6 @@
 					color: var(--color-primary);
 					/* Miscellaneous */
 					cursor: pointer;
-				}
-				input[type='checkbox']:focus + .confirm-button {
-					/* Box Model */
-					outline: 2px solid #4f46e5;
 				}
 			}
 		}
