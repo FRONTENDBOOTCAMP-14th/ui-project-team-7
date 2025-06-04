@@ -2,6 +2,7 @@
 @import '/src/components/bookcover/style.css';
 @import '/src/components/profile/style.css';
 @import '/src/components/avatar/style.css';
+@import '/src/components/navigation/style.css';
 
 body {
 	width: 100%;
@@ -342,7 +343,6 @@ span.writer {
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-
 	> h4 {
 		font-size: 12px;
 		font-weight: var(--weight-light);
@@ -379,12 +379,23 @@ span.writer {
 		height: 160px;
 		padding: 24px;
 
-		p {
+		div {
 			color: #111;
-			font-size: 12px;
-			font-weight: 700;
-			line-height: 16px; /* 133.333% */
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
 			margin-bottom: 26px;
+
+			.pick {
+				font-size: 12px;
+				font-weight: 700;
+				line-height: 16px; /* 133.333% */
+				margin-right: 3.6px;
+			}
+
+			.line-svg {
+				margin-right: auto;
+			}
 		}
 
 		blockquote {
@@ -685,18 +696,26 @@ span.writer {
 	}
 }
 
+/* 상단으로 가는 버튼 */
 .to-top {
 	width: 40px;
 	height: 40px;
 	position: fixed;
 	text-align: center;
 	align-content: center;
-	bottom: 10px;
-	right: 10%;
+	bottom: 14%;
+	right: 4%;
 	border-radius: 20px;
 	border: 1px solid #fff;
 	background: rgba(255, 255, 255, 0.94);
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 네비게이션 바 */
+.nav-bar {
+	position: fixed;
+	bottom: 0;
+	background: var(--color-white);
 }
 footer {
 	width: 100%;
