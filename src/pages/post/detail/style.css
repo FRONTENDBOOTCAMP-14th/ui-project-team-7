@@ -327,6 +327,12 @@ h3 {
 	gap: 18px;
 }
 
+.action-right .comment {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
 .action-number {
 	--color-333: #333;
 	--font-size-16: 16px;
