@@ -110,6 +110,9 @@
 
 	/* Visual */
 	color: #4b4b4b;
+
+	/* Miscellaneous */
+	cursor: pointer;
 }
 
 .save-id .checkbox-icon {
