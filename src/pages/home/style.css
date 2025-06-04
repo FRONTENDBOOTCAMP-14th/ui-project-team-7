@@ -126,6 +126,7 @@ span.writer {
 			display: flex;
 			gap: 9.33px;
 			padding-inline: 12px;
+			border-bottom: 1px solid var(--color-border-gray);
 		}
 
 		.tab-list > button {
@@ -138,12 +139,12 @@ span.writer {
 			border: transparent;
 			background: transparent;
 			padding-bottom: var(--spacing-4);
+		}
 
-			&:focus {
-				color: #111;
-				font-weight: var(--weight-bold);
-				border-bottom: 1px solid var(--color-primary);
-			}
+		.tab-list.active button {
+			color: #111;
+			font-weight: var(--weight-bold);
+			border-bottom: 1px solid var(--color-primary);
 		}
 
 		.button-container {
@@ -203,6 +204,12 @@ span.writer {
 					aspect-ratio: 1;
 					object-fit: cover;
 				}
+			}
+		}
+		.tab-contents {
+			/* display: none; */
+			&.active {
+				display: block;
 			}
 		}
 	}
