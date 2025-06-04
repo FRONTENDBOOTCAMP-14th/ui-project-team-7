@@ -3,7 +3,9 @@
 @import '/src/components/sub-btn/style.css';
 
 .wrapper {
-	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 	background-color: var(--color-background);
 	height: 144px;
 	border: none;
@@ -50,6 +52,7 @@
 
 .writer-name {
 	font-size: 27px;
+	font-weight: var(--weight-light);
 }
 
 .writer-job {
@@ -64,7 +67,7 @@
 
 .writer-stats {
 	display: flex;
-	gap: 16px;
+	gap: 12px;
 	font-size: 12px;
 	color: #666;
 	margin-top: 11.7px;
@@ -73,6 +76,7 @@
 .writer-stats p {
 	display: flex;
 	flex-direction: column;
+	gap: 4px;
 }
 
 .writer-stats span {
@@ -99,12 +103,17 @@
 	display: inline-block;
 }
 
+.post-label:hover {
+	text-decoration: underline;
+	text-shadow: 0 2px 4px rgba(93, 205, 205, 0.3);
+}
+
 /* 제목 */
 .post-title {
 	font-size: 18px;
 	font-weight: 300;
 	color: #333333;
-	margin-bottom: 10px;
+	margin-bottom: 4px;
 	line-height: 1.5;
 }
 
