@@ -250,20 +250,12 @@ h3 {
 	display: block;
 }
 
-/* 체크박스 숨기기 */
-#sunny-toggle {
-	display: none;
-}
-
-.author-profile > header {
-	padding-inline: 20px;
-}
-
-.author-profile > .author-description {
-	padding-inline: 20px;
-}
-
 /* Sunny 링크 스타일 */
+.author-profile {
+	padding-top: 60px;
+	border-top: 9px solid #f8f8f8;
+}
+
 #author-link {
 	--color-666: #666;
 	--font-size-12: 12px;
@@ -343,31 +335,18 @@ h3 {
 	font-size: var(--font-size-16);
 }
 
-#sunny-info {
-	display: none;
-}
-
-/* 체크박스가 체크되었을 때 */
-#sunny-toggle:checked ~ #sunny-info {
-	display: block;
-}
-
-#sunny-toggle:checked ~ .wrapper {
-	display: none;
-}
-
-#sunny-toggle:checked ~ .post-header {
-	display: none;
-}
-
-#sunny-toggle:checked ~ .post-container {
-	display: none;
-}
-
 .article-profile {
 	.subscribe-section {
 		padding-block: 10px;
 	}
+}
+
+.author-description {
+	padding-inline: 20px;
+}
+
+.author-profile > header {
+	padding-inline: 20px;
 }
 
 .comment-header > .avatar {
