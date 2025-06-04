@@ -173,10 +173,6 @@ h3 {
 }
 
 .comment-header > .avatar {
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	object-fit: cover;
 	margin-right: 0.75rem;
 }
 
@@ -372,4 +368,17 @@ h3 {
 	.subscribe-section {
 		padding-block: 10px;
 	}
+}
+
+.comment-header > .avatar {
+	--size: 32px;
+}
+
+.comment-header:last-of-type > .avatar {
+	--size: 18px;
+}
+
+.comment-toggle .avatar {
+	--size: 18px;
+	margin-right: 0;
 }
