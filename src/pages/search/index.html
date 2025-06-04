@@ -18,7 +18,7 @@
 	<body>
 		<header class="search-header">
 			<form class="search-form" role="search" aria-label="검색">
-				<label for="search-input" class="visually-hidden">검색어 입력</label>
+				<label for="search-input" class="sr-only">검색어 입력</label>
 				<input
 					type="search"
 					id="search-input"
@@ -167,15 +167,33 @@
 		<main class="search-main">
 			<!-- 탭 내용 -->
 			<!-- 라디오 버튼 숨기기 -->
-			<input type="radio" name="tab" id="tab-post" checked hidden />
-			<input type="radio" name="tab" id="tab-author" hidden />
+			<input type="radio" name="tab" id="tab-post" checked class="sr-only" />
+			<input type="radio" name="tab" id="tab-author" class="sr-only" />
 
 			<!-- 탭 네비게이션 -->
-			<div class="tab-nav">
-				<label for="tab-post" class="tab-1">글</label>
-				<label for="tab-author" class="tab-2">작가</label>
+			<div class="tab-nav" role="tablist" aria-label="탭 네비게이션">
+				<label
+					for="tab-post"
+					role="tab"
+					class="tab-1"
+					aria-selected="true"
+					id="tab-posts"
+					aria-controls="tab-post"
+					>글</label
+				>
+				<label
+					for="tab-author"
+					role="tab"
+					class="tab-2"
+					aria-selected="false"
+					id="tab-authors"
+					aria-controls="tab-author"
+					>작가</label
+				>
 			</div>
-			<div class="tab-content1">
+
+			<!-- 글 탭 -->
+			<div class="tab-content1" aria-labelledby="tab-posts">
 				<div class="search-meta">
 					<span class="result-count">글 검색 결과 800건</span>
 					<div class="sort-options">
@@ -183,107 +201,131 @@
 						<a href="#" class="deactive">최신</a>
 					</div>
 				</div>
+				<!-- 글 리스트 -->
 				<ul class="post-list">
-					<h2 class="post-title">딸의 정부청사 출장에 부모님이 동행하는 이유</h2>
 					<li class="post-item">
 						<a href="/" class="post-link">
-							<div class="post-text">
-								<p class="post-preview">
-									분이 많네요, 감사드립니다! 직장인(신입)으로 울릉도에서 근무하며
-									얻게 된 직장생활에 도움되는 정보를 알려주셔서 감사드립니다!
-								</p>
-								<div class="post-meta">
-									<span class="post-date">Apr 19. 2024</span>
-									<span class="post-author"
-										><span class="itac">by</span> 은설 aka꿈꾸는 알</span
-									>
+							<h2 class="post-title">딸의 정부청사 출장에 부모님이 동행하는 이유</h2>
+
+							<div class="post-info">
+								<div class="post-text">
+									<p class="post-preview">
+										분이 많네요, 감사드립니다! 직장인(신입)으로 울릉도에서
+										근무하며 얻게 된 직장생활에 도움 되는
+									</p>
+									<div class="post-meta">
+										<span class="post-date">Apr 19. 2024</span>
+										<span class="post-author"
+											><span class="itac">by</span> 은설 aka꿈꾸는 알</span
+										>
+									</div>
 								</div>
+
+								<img
+									src="/src/assets/search/post1.jpg"
+									alt="썸네일"
+									class="post-thumbnail"
+								/>
 							</div>
-							<img
-								src="/src/assets/search/post1.jpg"
-								alt="썸네일"
-								class="post-thumbnail"
-							/>
 						</a>
 					</li>
 				</ul>
 				<ul class="post-list">
-					<h2 class="post-title">덴마크의 '꿀 하트'쿠키, Honninghjerter</h2>
 					<li class="post-item">
 						<a href="/" class="post-link">
-							<div class="post-text">
-								<p class="post-preview">
-									오늘날까지 같은 주소에서 영업 중이다. 덴마크의 여왕 잉그리드도
-									이 꿀케이크 제과점을 자주 찾는다.
-								</p>
-								<div class="post-meta">
-									<span class="post-date">Nov 16. 2024</span>
-									<span class="post-author"
-										><span class="itac">by</span> Windsbird</span
-									>
+							<h2 class="post-title">
+								덴마크의 '<span class="highlight">꿀</span> 하트' 쿠키,
+								Honninghjerter
+							</h2>
+
+							<div class="post-info">
+								<div class="post-text">
+									<p class="post-preview">
+										오늘날까지 같은 주소에서 영업 중이다. 덴마크의 여왕
+										앙그리드도 이 <span class="highlight">꿀</span>케이크
+										제과점을 자주 찾는다고 한다.
+									</p>
+									<div class="post-meta">
+										<span class="post-date">Nov 16. 2023</span>
+										<span class="post-author"
+											><span class="itac">by</span> Windsbird</span
+										>
+									</div>
 								</div>
+
+								<img
+									src="/src/assets/search/post2.jpg"
+									alt="썸네일"
+									class="post-thumbnail"
+								/>
 							</div>
-							<img
-								src="/src/assets/search/post2.jpg"
-								alt="썸네일"
-								class="post-thumbnail"
-							/>
 						</a>
 					</li>
 				</ul>
 				<ul class="post-list">
-					<h2 class="post-title">꿀 빠는 풍경</h2>
 					<li class="post-item">
 						<a href="/" class="post-link">
-							<div class="post-text">
-								<p class="post-preview">
-									책을 보며 기다린 적도 있다. 책을 가까이하는 모습을 보이고, 책을
-									읽어주고. 들인 수고에 비해 효과가 엄청나다.
-								</p>
-								<div class="post-meta">
-									<span class="post-date">an 25. 2024</span>
-									<span class="post-author"
-										><span class="itac">by</span> 쑥쑤루쑥</span
-									>
+							<h2 class="post-title"><span class="highlight">꿀</span> 빠는 풍경</h2>
+
+							<div class="post-info">
+								<div class="post-text">
+									<p class="post-preview">
+										책을 보며 기다린 적도 있다. 책을 가까이하는 모습을 보이고,
+										책을 읽어주고. 들인 수고에 비해 효과
+									</p>
+									<div class="post-meta">
+										<span class="post-date">Jan 25. 2024</span>
+										<span class="post-author"
+											><span class="itac">by</span> 쑥쑤루쑥</span
+										>
+									</div>
 								</div>
+
+								<img
+									src="/src/assets/search/post3.jpg"
+									alt="썸네일"
+									class="post-thumbnail"
+								/>
 							</div>
-							<img
-								src="/src/assets/search/post3.jpg"
-								alt="썸네일"
-								class="post-thumbnail"
-							/>
 						</a>
 					</li>
 				</ul>
 				<ul class="post-list">
-					<h2 class="post-title">
-						373) 사진만 봐도 꿀과 윤기가 좌르르, 구움과자 - 롱블랙 3월 28일, 문장채집
-						no.373
-					</h2>
 					<li class="post-item">
 						<a href="/" class="post-link">
-							<div class="post-text">
-								<p class="post-preview">
-									주방에서 아카데미 시작. 3.커리큘럼이 특이. 수업 중 조리 기술을
-									배우는 시간은 극히 일부. 수강생
-								</p>
-								<div class="post-meta">
-									<span class="post-date">Mar 28. 2023</span>
-									<span class="post-author"
-										><span class="itac">by</span> 백영선 플라잉웨일 ...</span
-									>
+							<h2 class="post-title">
+								373) <span class="highlight">사진</span>만 봐도
+								<span class="highlight">꿀</span>과 윤기가 좌르르, 구움과자 - 3월
+								28일, 문장채집 no.373
+							</h2>
+
+							<div class="post-info">
+								<div class="post-text">
+									<p class="post-preview">
+										주방에서 아카데미 시작. 3. 커리큘럼이 특이. 수업 중 조리
+										기술을 배우는 시간은 극히 일부. 수강생
+									</p>
+									<div class="post-meta">
+										<span class="post-date">Mar 28. 2023</span>
+										<span class="post-author"
+											><span class="itac">by</span> 백영선 플라잉웨일</span
+										>
+									</div>
 								</div>
+
+								<img
+									src="/src/assets/search/post4.jpg"
+									alt="썸네일"
+									class="post-thumbnail"
+								/>
 							</div>
-							<img
-								src="/src/assets/search/post4.jpg"
-								alt="썸네일"
-								class="post-thumbnail"
-							/>
 						</a>
 					</li>
 				</ul>
 			</div>
-			<div class="tab-content2">
+
+			<!-- 작가 탭 -->
+			<div class="tab-content2" aria-labelledby="tab-authors">
 				<div class="search-meta">
 					<span class="result-count">작가 검색 결과 32건</span>
 				</div>
@@ -303,7 +345,31 @@
 								<img src="/src/assets/search/profile-1.jpg" alt="프로필" />
 							</picture>
 							<div class="author-info">
-								<h3 class="author-name">꿀별</h3>
+								<h3 class="author-name"><span class="highlight">꿀</span>아빠</h3>
+								<p class="author-bio">
+									두 아들 아빠 기록남기기 좋아하는 아빠 고민하는 아빠입니다
+								</p>
+								<div class="author-tags">
+									<span class="tag">여행</span>
+								</div>
+							</div>
+						</li>
+					</a>
+					<a href="/">
+						<li class="author-card">
+							<picture class="avatar">
+								<source
+									srcset="/src/assets/search/profile-2.avif"
+									type="image/avif"
+								/>
+								<source
+									srcset="/src/assets/search/profile-2.webp"
+									type="image/webp"
+								/>
+								<img src="/src/assets/search/profile-2.jpg" alt="프로필" />
+							</picture>
+							<div class="author-info">
+								<h3 class="author-name"><span class="highlight">꿀</span>별</h3>
 								<p class="author-bio">
 									글 쓰고 디자인 하는 사람. 마음이 담긴 일을 해요. 하늘 일에
 									마음을 담아요.
@@ -325,22 +391,27 @@
 						<li class="author-card">
 							<picture class="avatar">
 								<source
-									srcset="/src/assets/search/profile-2.avif"
+									srcset="/src/assets/search/profile-3.avif"
 									type="image/avif"
 								/>
 								<source
-									srcset="/src/assets/search/profile-2.webp"
+									srcset="/src/assets/search/profile-3.webp"
 									type="image/webp"
 								/>
-								<img src="/src/assets/search/profile-2.jpg" alt="프로필" />
+								<img src="/src/assets/search/profile-3.jpg" alt="프로필" />
 							</picture>
 							<div class="author-info">
-								<h3 class="author-name">꿀아빠</h3>
+								<h3 class="author-name">
+									개발자 <span class="highlight">꿀</span>
+								</h3>
 								<p class="author-bio">
-									두 아들 아빠 기록남기기 좋아하는 아빠 고민하는 아빠입니다
+									느리게 흘러가는 스톡홀름에 사는 개발자입니다! 🙂 여가를 좋아하고
+									심심하면 이것저것 써요.
 								</p>
 								<div class="author-tags">
-									<span class="tag">여행</span>
+									<span class="tag">해외생활</span>
+									<span class="tag">IT</span>
+									<span class="tag">개발자</span>
 								</div>
 							</div>
 						</li>
@@ -359,34 +430,7 @@
 								<img src="/src/assets/search/profile-4.jpg" alt="프로필" />
 							</picture>
 							<div class="author-info">
-								<h3 class="author-name">개발자 꿀</h3>
-								<p class="author-bio">
-									느리게 흘러가는 스톡홀름에 사는 개발자입니다! 🙂 여가를 좋아하고
-									심심하면 이것저것 써요.
-								</p>
-								<div class="author-tags">
-									<span class="tag">해외생활</span>
-									<span class="tag">IT</span>
-									<span class="tag">개발자</span>
-								</div>
-							</div>
-						</li>
-					</a>
-					<a href="/">
-						<li class="author-card">
-							<picture class="avatar">
-								<source
-									srcset="/src/assets/search/profile-3.avif"
-									type="image/avif"
-								/>
-								<source
-									srcset="/src/assets/search/profile-3.webp"
-									type="image/webp"
-								/>
-								<img src="/src/assets/search/profile-3.jpg" alt="프로필" />
-							</picture>
-							<div class="author-info">
-								<h3 class="author-name">꿀갱</h3>
+								<h3 class="author-name"><span class="highlight">꿀</span>갱</h3>
 								<p class="author-bio">제 일상에 대한 글입니다.</p>
 								<div class="author-tags">
 									<span class="tag">여행</span>
