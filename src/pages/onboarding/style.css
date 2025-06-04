@@ -37,7 +37,7 @@
 	top: 0;
 	width: 100%;
 	max-width: 527px;
-	height: 1112px;
+	height: 100vh;
 	background-color: #cdff00;
 	border-radius: 20px;
 	box-sizing: border-box;
@@ -50,9 +50,10 @@
 	z-index: -1;
 
 	.story-text {
-		font-size: 20px;
+		font-size: 30px;
 		color: #000;
 		line-height: 1.5;
+		font-weight: var(--weight-bold);
 	}
 
 	.story-illustration {
