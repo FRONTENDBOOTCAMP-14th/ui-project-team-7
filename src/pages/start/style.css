@@ -1,0 +1,49 @@
+@import '/src/components/auth/auth-button.css';
+@import '/src/components/info-with-lady/style.css';
+
+.auth-button {
+	/* Visual */
+	--color: #333;
+	--background-color: #ffe500;
+	/* Box Model */
+	--border-radius: 6px;
+}
+
+.start-page {
+	/* Box Model */
+	display: flex;
+	width: 100%;
+	max-width: 800px;
+	height: 100vh;
+	margin-inline: auto;
+
+	/* Layout */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 70px;
+
+	.start-page-links {
+		/* Box Model */
+		display: flex;
+		width: 100%;
+		padding-inline: 1.25rem;
+		/* Layout */
+		flex-direction: column;
+		align-items: center;
+		gap: var(--spacing-8);
+
+		.auth-button {
+			/* Box Model */
+			max-width: 800px;
+		}
+
+		.to-login {
+			/* Box Model */
+			text-decoration: underline;
+			/* Typography */
+			font-size: var(--font-size-xs);
+			color: var(--color-font-gray);
+		}
+	}
+}
