@@ -72,9 +72,6 @@ body {
 	bottom: 0;
 	left: 0;
 	background-color: var(--color-white);
-	svg {
-		margin-bottom: -3px;
-	}
 
 	z-index: 1000;
 }
