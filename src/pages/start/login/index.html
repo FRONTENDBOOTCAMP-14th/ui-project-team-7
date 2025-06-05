@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>로그인 | 7'linstory</title>
+		<link rel="icon" href="/favicon.svg" />
+		<link
+			rel="preload"
+			as="font"
+			href="/font/woff2/PretendardVariable.woff2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+		<link rel="stylesheet" href="/src/global.css" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1 class="sr-only">브런치 스토리 로그인</h1>
+		<main class="start-page">
+			<figure class="info-with-lady">
+				<h2 class="sr-only">브런치 스토리를 시작 안내</h2>
+				<picture>
+					<source srcset="/src/assets/start/start-lady.avif" type="image/avif" />
+					<source srcset="/src/assets/start/start-lady.webp" type="image/webp" />
+					<img
+						src="/src/assets/start/start-lady.png"
+						width="440"
+						height="260"
+						alt="책 읽는 여자"
+					/>
+				</picture>
+				<figcaption>
+					<em>브런치 작가로 데뷔하세요</em>
+					<p>
+						진솔한 에세이부터 업계 전문 지식까지,<br />
+						당신의 이야기를 세상에 선보이세요.
+					</p>
+				</figcaption>
+			</figure>
+			<form action="/index.html">
+				<div class="inputs">
+					<div class="id-input">
+						<input
+							type="text"
+							id="username"
+							name="username"
+							placeholder="아이디"
+							required
+							minlength="4"
+							maxlength="16"
+						/>
+						<span class="error-message">아이디를 조건에 맞게 입력해주세요.</span>
+						<label for="username" class="sr-only">아이디</label>
+					</div>
+					<div class="pw-input">
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="비밀번호"
+							required
+							minlength="8"
+							maxlength="16"
+						/>
+						<span class="error-message">비밀번호를 조건에 맞게 입력해주세요.</span>
+						<label for="password" class="sr-only">비밀번호</label>
+					</div>
+				</div>
+				<div class="save-id">
+					<div class="relative">
+						<input type="checkbox" name="save-id" id="save-id" />
+						<label for="save-id">
+							<span class="checkbox-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+								>
+									<rect width="20" height="20" rx="10" fill="#00C6BE" />
+									<path
+										d="M15.6666 6.3335L8.99992 14.0002L4.33325 9.00016"
+										stroke="white"
+									/>
+								</svg>
+							</span>
+							로그인 정보 저장</label
+						>
+					</div>
+				</div>
+				<div class="buttons">
+					<button type="submit" class="auth-button">카카오 계정으로 로그인</button>
+					<a href="/src/pages/start/signup/index.html" class="auth-button to-signup"
+						>회원가입</a
+					>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
