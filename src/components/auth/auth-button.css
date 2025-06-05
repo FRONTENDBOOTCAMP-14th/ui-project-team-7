@@ -1,12 +1,9 @@
-:root {
+.auth-button {
 	--color: var(--color-white);
 	--background-color: var(--color-primary);
 	--invalid-color: var(--color-white);
 	--invalid-background-color: #aaa;
 	--border-radius: 4px; /* 6px로 변경 가능성 있음 */
-}
-
-.auth-button {
 	/* Box Model */
 	width: 100%;
 	height: 50px;
@@ -24,7 +21,7 @@
 	font-size: var(--font-size-sm);
 }
 
-form:has(input:invalid, textarea:invalid) .auth-button {
+form:has(input:invalid, textarea:invalid) button.auth-button {
 	/* Miscellaneous */
 	cursor: not-allowed;
 	/* Visual */

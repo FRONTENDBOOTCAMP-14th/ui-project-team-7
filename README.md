@@ -5,37 +5,37 @@
 ```bash
 ├── public
 │   ├── font
-│   └── vite.svg
+│   └── favicon.svg
 ├── src
 │   ├── reset.css
 │   ├── global.css
-│   └── components
-│   	└── component-name
-│   		└── index.html
+│   ├── assets
+│   ├── components
+│   │	└── component-name
+│   │		├── index.html
+│   │		└── style.css
+│   └── pages
+│   	└── page-name
+│   		├── index.html
 │   		└── style.css
-│   └── page-name
-│   	├── style.css
-│   	└── index.html
 └── index.html
 ```
 
--   public: build될 필요 없는 정적 파일
+-   public: build 시 번들링될 필요 없는 정적 파일
 -   reset.css: style 초기화
 -   global.css: 커스텀 속성 선언. reset.css를 가져옴
--   components: 재사용 가능한 컴포넌트들
+-   assets: 이미지, 아이콘 등
+-   components: 재사용 가능한 컴포넌트들. index.html에 컴포넌트 요소, style.css에 커스텀 속성을 활용한 스타일 선언
 
     -   특정 페이지에서 컴포넌트 A 사용 시
 
-        -   `/src/page-name/style.css`: `/src/components/component-a/style.css` 파일을 import
+        -   `/src/pages/page-name/style.css`: `/src/components/component-a/style.css` 파일을 import
             ```css
             @import '/src/components/component-a/style.css';
             ```
-        -   `/src/page-name/index.html`: `/src/components/component-a/index.html` 내에 html 요소만을 copy/paste하여 사용한다
+        -   `/src/pages/page-name/index.html`: `/src/components/component-a/index.html` 내에 html 요소만을 copy/paste하여 사용한다
 
--   page-name: 페이지별 index.html, style.css를 그룹화한다. **항상 global.css를 import한다.**
-    ```css
-    @import '../global.css';
-    ```
+-   pages: 페이지별 index.html, style.css
 
 ## coding convention
 
@@ -65,20 +65,16 @@ PR은 나머지 팀원 3명의 approval이 있어야 머지 가능하며, resolv
 
 ```bash
 main
-└── release
 └── develop
-	└── feature branch(feat, refactor, fix, etc..)
+	└── feature branch(feat/components, feat/pages)
+		└── sub-feature branch(feat/components-*, feat/pages-*)
+	└── bugfix branch(fix/*)
 ```
 
 -   main: Netlify로 배포하는 브랜치로, push 불가하며 실제 서비스에 해당
--   release: 배포 전 잘 작동하는지 확인하는 브랜치
 -   develop: default/root 브랜치로, 모든 기능 구현의 시작점이다. push 불가
 -   feature branch: 기능 구현을 위한 브랜치
-    -   feat/페이지이름 혹은 기능
-    -   refactor/개선사항
-    -   fix/버그수정사항
-    -   style/스타일변경
-    -   etc...
+-   bugfix branch: 예상치 못한 에러가 발생했을 때 수정을 위한 브랜치
 
 ### HTML, CSS
 

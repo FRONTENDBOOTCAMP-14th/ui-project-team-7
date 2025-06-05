@@ -2,60 +2,56 @@
 <html lang="ko-KR">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>구독버튼 컴포넌트</title>
-		<link rel="icon" href="/vite.svg" />
-		<link
-			rel="preload"
-			as="font"
-			href="/font/woff2/PretendardVariable.woff2"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
-		<link rel="stylesheet" href="/src/global.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
+		<title>구독 버튼 컴포넌트</title>
+		<link rel="icon" href="/favicon.svg" />
 	</head>
 	<body>
 		<form action="#" method="POST">
 			<input type="checkbox" id="subscribe" class="sr-only" />
-			<label for="subscribe" class="sub-btn" role="button" tabindex="0">
-				<!-- 체크 아이콘 -->
-				<svg
-					class="icon check-icon"
-					width="17"
-					height="17"
-					viewBox="0 0 24 24"
-					fill="none"
-					aria-hidden="true"
-				>
-					<path
-						d="M20 6L9 17L4 12"
-						stroke="white"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
-				</svg>
+			<label for="subscribe" class="sub-btn">
+				<div class="icon-container">
+					<!-- 체크 아이콘 -->
+					<svg
+						class="icon check-icon"
+						width="17"
+						height="17"
+						viewBox="0 0 24 24"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M20 6L9 17L4 12"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
 
-				<!-- 플러스 아이콘 -->
-				<svg
-					class="icon plus-icon"
-					width="17"
-					height="17"
-					viewBox="0 0 24 24"
-					fill="none"
-					aria-hidden="true"
-				>
-					<path
-						d="M12 5v14M5 12h14"
-						stroke="#00C6BE"
-						stroke-width="2"
-						stroke-linecap="round"
-					/>
-				</svg>
+					<!-- 플러스 아이콘 -->
+					<svg
+						class="icon plus-icon"
+						width="17"
+						height="17"
+						viewBox="0 0 24 24"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M12 5v14M5 12h14"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</div>
 
-				<span class="sub-off">구독</span>
-				<span class="sub-on">구독중</span>
+				<div class="text-container">
+					<span class="sub-off">구독</span>
+					<span class="sub-on">구독중</span>
+				</div>
 			</label>
 		</form>
 	</body>

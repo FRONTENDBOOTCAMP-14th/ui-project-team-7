@@ -1,0 +1,128 @@
+@import '/src/components/header/style.css';
+@import '/src/components/avatar/style.css';
+@import '/src/components/bookcover/style.css';
+@import '/src/components/navigation/style.css';
+.avatar {
+	--size: 80px;
+}
+
+.book-card {
+	--width: 122.86px;
+	--height: 172px;
+}
+
+.nav-bar {
+	position: fixed;
+	bottom: 0;
+	background-color: var(--color-white);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 34px;
+	padding-block-start: 34px;
+	margin-block-end: 100px;
+}
+
+h2,
+.slider {
+	padding-inline: 25px;
+}
+
+h2 {
+	margin-block-end: 0.9375rem;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+
+	font-size: 1.1875rem;
+
+	& > img {
+		min-width: 20px;
+	}
+}
+
+.slider {
+	width: 100%;
+	display: flex;
+	gap: 26px;
+	overflow-x: auto;
+
+	& > .slider-unit {
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+}
+
+.recent,
+.marked-post {
+	.slider-unit {
+		width: 122.86px;
+	}
+
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		text-align: center;
+
+		.book-title {
+			line-height: 1.4375rem;
+			font-size: 0.75rem;
+		}
+
+		.author {
+			line-height: var(--font-size-xl);
+		}
+	}
+}
+
+.my-brunch {
+	& > div {
+		height: 107px;
+		border-block-start: 1px solid var(--color-border-gray);
+		padding: 0.9375rem 1.5625rem;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		h3 {
+			color: #111;
+			font-size: var(--font-size-base);
+			font-weight: var(--weight-medium);
+			line-height: 1.625rem;
+		}
+
+		p,
+		time {
+			color: var(--color-font-gray);
+			font-size: 0.75rem;
+			font-weight: var(--weight-medium);
+			line-height: 18px; /* 150% */
+		}
+		time {
+			margin-block-start: 1px;
+		}
+	}
+	& > div:last-child {
+		border-block-end: 1px solid var(--color-border-gray);
+	}
+}
+
+.author {
+	font-size: var(--font-size-xs);
+	line-height: var(--font-size-lg);
+	color: #bbb;
+
+	.by-text {
+		font-weight: var(--font-weight-bold);
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		font-style: italic;
+	}
+}

@@ -1,0 +1,162 @@
+@import '/src/components/auth/auth-button.css';
+@import '/src/components/info-with-lady/style.css';
+
+.start-page {
+	/* Box Model */
+	width: 100%;
+	min-height: 100vh;
+	max-width: 800px;
+	margin-inline: auto;
+	padding-inline: 1.25rem;
+
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 70px;
+
+	form {
+		width: 100%;
+
+		.inputs {
+			margin-block-end: var(--spacing-7);
+
+			& > .id-input {
+				margin-block-end: var(--spacing-1);
+			}
+
+			.id-input,
+			.pw-input {
+				/* Box Model */
+				width: 100%;
+
+				/* Layout */
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-2);
+
+				& > input {
+					/* Box Model */
+					width: 100%;
+					height: 43px;
+					border: none;
+					border-bottom: 1px solid #d7d7d7;
+					outline: none;
+
+					/* Layout */
+					flex-shrink: 0;
+
+					/* Typography */
+					font-size: var(--font-size-sm);
+
+					/* Visual */
+					color: #8e8e8e;
+
+					&:focus {
+						border-bottom: 2px solid var(--color-primary);
+					}
+				}
+				& > .error-message {
+					/* Box Model */
+					display: none;
+
+					/* Typography */
+					font-size: 0.75rem;
+
+					/* Visual */
+					color: #fc3b75;
+				}
+
+				& > input:user-invalid + .error-message {
+					display: block;
+				}
+			}
+		}
+
+		.buttons {
+			/* Box Model */
+			width: 100%;
+
+			/* Layout */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: var(--spacing-4);
+
+			.auth-button {
+				/* Box Model */
+				width: 100%;
+				max-width: 800px;
+			}
+			.auth-button.to-signup {
+				/* Visual */
+				background-color: var(--color-white);
+				color: var(--color-primary);
+				border: 1px solid currentColor;
+			}
+		}
+	}
+}
+
+.save-id {
+	/* Box Model */
+	margin-block-end: var(--spacing-8);
+
+	/* Layout */
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3);
+
+	.relative {
+		position: relative;
+		width: 114px;
+		height: 1.25rem;
+		display: flex;
+		align-items: center;
+
+		input,
+		label {
+			position: absolute;
+			width: 100%;
+			height: 20px;
+		}
+
+		input {
+			margin: 0;
+			appearance: none;
+		}
+	}
+}
+
+.save-id label {
+	/* Layout */
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-2);
+
+	/* Visual */
+	color: #4b4b4b;
+
+	/* Typography */
+	font-size: var(--font-size-xs);
+	line-height: 1.25rem;
+}
+
+.save-id .checkbox-icon {
+	/* Box Model */
+	width: 1.25rem;
+	height: 1.25rem;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.save-id .checkbox-icon rect {
+	/* Visual */
+	fill: #ddd;
+}
+
+.save-id input[type='checkbox']:checked + label rect {
+	/* Visual */
+	fill: var(--color-primary);
+}

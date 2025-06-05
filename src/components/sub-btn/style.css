@@ -15,42 +15,88 @@
 	font-size: var(--font-size-xs);
 	font-weight: var(--weight-medium);
 	user-select: none;
-
-	.icon {
-		display: flex;
-	}
-
-	.check-icon {
-		display: none;
-	}
-
-	.sub-on {
-		display: none;
-	}
-
-	/* 구독 */
-	.plus-icon,
-	.sub-off {
-		display: flex;
-	}
+	position: relative;
+	width: 70px;
+	height: 36px;
+	transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* 구독중 */
+/* 아이콘 컨테이너 - 같은 위치에 겹치도록 */
+.icon-container {
+	position: relative;
+	width: 17px;
+	height: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 모든 아이콘을 같은 위치에 겹치기 */
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s ease;
+}
+
+/* 기본 상태: 플러스 아이콘 보임, 체크 아이콘 숨김 */
+.plus-icon {
+	opacity: 1;
+}
+
+.check-icon {
+	opacity: 0;
+}
+
+/* 텍스트 컨테이너 - 중앙 정렬 유지 */
+.text-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.sub-off,
+.sub-on {
+	transition: opacity 0.3s ease;
+}
+
+/* 기본 상태: 구독 텍스트 보임, 구독중 텍스트 숨김 */
+.sub-off {
+	opacity: 1;
+}
+
+.sub-on {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	white-space: nowrap;
+}
+
+/* 구독중 상태 */
 #subscribe:checked + .sub-btn {
 	background-color: var(--color-primary);
 	color: var(--color-white);
-	border: none;
+	border: 1px solid var(--color-primary);
+	width: 78px;
+}
 
-	.check-icon {
-		display: flex;
-	}
+#subscribe:checked + .sub-btn .plus-icon {
+	opacity: 0;
+}
 
-	.sub-on {
-		display: flex;
-	}
+#subscribe:checked + .sub-btn .check-icon {
+	opacity: 1;
+}
 
-	.plus-icon,
-	.sub-off {
-		display: none;
-	}
+#subscribe:checked + .sub-btn .sub-off {
+	opacity: 0;
+}
+
+#subscribe:checked + .sub-btn .sub-on {
+	opacity: 1;
 }
